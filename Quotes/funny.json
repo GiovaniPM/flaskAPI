@@ -1,0 +1,414 @@
+{
+    "Quotes":[
+      {
+        "author":"Oscar Wilde",
+        "quote":"This suspense is terrible. I hope it will last.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Mark Twain",
+        "quote":"Go to Heaven for the climate, Hell for the company.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Jerry Seinfeld",
+        "quote":"If a book about failures doesn’t sell, is it a success?",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Billy Sunday",
+        "quote":"Going to church doesn’t make you a Christian any more than going to a garage makes you an automobile.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Laurell K. Hamilton",
+        "quote":"Never trust people who smile constantly. They’re either selling something or not very bright.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Mark Twain",
+        "quote":"I did not attend his funeral, but I sent a nice letter saying I approved of it.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Lily Tomlin",
+        "quote":"I always wanted to be somebody, but now I realize I should have been more specific.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Winston S. Churchill",
+        "quote":"A lie gets halfway around the world before the truth has a chance to get its pants on.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Cathy Guisewite",
+        "quote":"When life gives you lemons, squirt someone in the eye.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Ellen DeGeneres ",
+        "quote":"Accept who you are. Unless you’re a serial killer.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Bill Murray",
+        "quote":"Knowledge is like underwear. It is useful to have it, but not necessary to show it off.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Will Rogers",
+        "quote":"Everything is changing. People are taking the comedians seriously and the politicians as a joke.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Will Rogers",
+        "quote":"I have always noticed that people will never laugh at anything that is not based on truth.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Rodney Dangerfield",
+        "quote":"I came from a real tough neighborhood. Once a guy pulled a knife on me. I knew he wasn’t a professional, the knife had butter on it. ",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Rodney Dangerfield",
+        "quote":"When I was a kid my parents moved a lot, but I always found them.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"George Carlin",
+        "quote":"That’s why they call it the American Dream, because you have to be asleep to believe it.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Lawrence Ferlinghetti",
+        "quote":"If you’re too open-minded; your brains will fall out.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"George Bernard Shaw",
+        "quote":"A pessimist is a man who thinks everybody is as nasty as himself, and hates them for it.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Fred Allen",
+        "quote":"I like long walks, especially when they are taken by people who annoy me.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Steven Wright",
+        "quote":"If you think nobody cares about you, try missing a couple of payments.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Gore Vidal",
+        "quote":"The four most beautiful words in our common language: I told you so.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Albert Einstein",
+        "quote":"The difference between stupidity and genius is that genius has its limits.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Mark Twain",
+        "quote":"The only way to keep your health is to eat what you don’t want, drink what you don’t like, and do what you’d rather not.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Steven Wright",
+        "quote":"I intend to live forever. So far, so good.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Mitch Hedberg",
+        "quote":"I like rice. Rice is great when you’re hungry and you want 2000 of something.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Steven Wright",
+        "quote":"I’m addicted to placebos",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Unknown",
+        "quote":"When nothing is going right, go left.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Bill Watterson",
+        "quote":"Reality continues to ruin my life.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Phyllis Diller",
+        "quote":"Never go to bed mad. Stay up and fight.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Pablo Picasso",
+        "quote":"I’d like to live like a poor man – only with lots of money.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Alfred Hitchcock",
+        "quote":"Puns are the highest form of literature.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Steven Wright",
+        "quote":"What’s another word for Thesaurus?",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Mitch Hedberg",
+        "quote":"If I had nine of my fingers missing I wouldn’t type any slower. ",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Unknown",
+        "quote":"Don’t judge me. I was born to be awesome, not perfect.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Unknown",
+        "quote":"What do people do with all the extra time they save by writing ‘k’ instead of ‘ok’?",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Unknown",
+        "quote":"My life feels like a test I didn’t study for.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Unknown",
+        "quote":"I don’t go crazy. I am crazy. I just go normal from time to time.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Unknown",
+        "quote":"My bed is a magical place where I suddenly remember everything I forgot to do.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Unknown",
+        "quote":"Everything happens for a reason. But sometimes the reason is that you’re stupid and you make bad decisions.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Steven Wright",
+        "quote":"I’m writing a book. I’ve got the page numbers done.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Abraham Lincoln",
+        "quote":"Better to remain silent and be thought a fool than to speak out and remove all doubt.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Abraham Lincoln",
+        "quote":"If I were two-faced, would I be wearing this one?",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Abraham Lincoln",
+        "quote":"The best thing about the future is that it comes one day at a time.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Al McGuire",
+        "quote":"The only mystery in life is why the kamikaze pilots wore helmets.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Alan Dundes",
+        "quote":"Light travels faster than sound. This is why some people appear bright until you hear them speak.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Albert Camus",
+        "quote":"Nobody realizes that some people expend tremendous energy merely to be normal.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Albert Einstein",
+        "quote":"Men marry women with the hope they will never change. Women marry men with the hope they will change. Invariably they are both disappointed.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Alexander Woollcott",
+        "quote":"All the things I really like to do are either immoral, illegal or fattening.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Ambrose Bierce",
+        "quote":"War is God’s way of teaching Americans geography.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Andy Roone",
+        "quote":"The average dog is a nicer person than the average person.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Ann Landers",
+        "quote":"If you want your children to listen, try talking softly to someone else.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Anton Chekhov",
+        "quote":"Doctors are just the same as lawyers; the only difference is that lawyers merely rob you, whereas doctors rob you and kill you too.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Arthur C. Clarke",
+        "quote":"I don’t believe in astrology; I’m a Sagittarius and we’re skeptical.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Ashleigh Brilliant",
+        "quote":"My opinions may have changed, but not the fact that I’m right.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Ashleigh Brilliant",
+        "quote":"To be sure of hitting the target, shoot first, and call whatever you hit the target.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Benjamin Franklin",
+        "quote":"Wine is constant proof that God loves us and loves to see us happy.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Bertrand Russell",
+        "quote":"Most people would sooner die than think; in fact, they do so.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Bertrand Russell",
+        "quote":"The world is full of magical things patiently waiting for our wits to grow sharper.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Betty White",
+        "quote":"Facebook just sounds like a drag, in my day seeing pictures of peoples vacations was considered a punishment.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Bill Maher",
+        "quote":"Everything that used to be a sin is now a disease.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Bill Vaughan",
+        "quote":"Money won’t buy happiness, but it will pay the salaries of a large research staff to study the problem.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Bill Watterson",
+        "quote":"The surest sign that intelligent life exists elsewhere in the universe is that it has never tried to contact us.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Billy Connolly",
+        "quote":"I’ve always wanted to go to Switzerland to see what the army does with those wee red knives.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Billy Wilder",
+        "quote":"If you’re going to tell people the truth, be funny or they’ll kill you.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Bob Hope",
+        "quote":"A bank is a place that will lend you money if you can prove that you don’t need it",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Bob Thaves",
+        "quote":"Inside me there’s a thin person struggling to get out, but I can usually sedate him with four or five cupcakes.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Bryan White",
+        "quote":"We never really grow up, we only learn how to act in public.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Caroline Rhea",
+        "quote":"My favorite machine at the gym is the vending machine.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Charles de Gaulle",
+        "quote":"He who laughs last didn’t get the joke.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Charles Lamb",
+        "quote":"I always arrive late at the office, but I make up for it by leaving early.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Charles M. Schulz",
+        "quote":"Don’t worry about the world coming to an end today. It is already tomorrow in Australia.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Charlie Chaplin",
+        "quote":"A day without laughter is a day wasted.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Christopher Morley",
+        "quote":"High heels were invented by a woman who had been kissed on the forehead.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Chuck Palahniuk",
+        "quote":"If you love something set it free, but don’t be surprised if it comes back with herpes.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Claude Pepper",
+        "quote":"A stockbroker urged me to buy a stock that would triple its value every year. I told him, ‘At my age, I don’t even buy green bananas.'",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Clint Eastwood",
+        "quote":"They say marriages are made in Heaven. But so is thunder and lightning.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Colonel Sanders",
+        "quote":"I’m too drunk to taste this chicken.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Conan O’Brien",
+        "quote":"Starbucks says they are going to start putting religious quotes on cups. The very first one will say, ‘Jesus! This cup is expensive!'",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Cullen Hightower",
+        "quote":"Laughing at our mistakes can lengthen our own life. Laughing at someone else’s can shorten it.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Cynthia Heimel",
+        "quote":"If you can’t live without me, why aren’t you dead already?",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"Dalai Lama",
+        "quote":"If you think you are too small to make a difference, try sleeping with a mosquito.",
+        "type": "Funny Quote"
+      },
+      {
+        "author":"",
+        "quote":"",
+        "type": "Funny Quote"
+      }
+    ]
+  }

@@ -1,0 +1,404 @@
+{
+    "Facts": [
+      {
+        "fact": "The English word for red panda is \u2018Firefox\u2019 which is where the browser gets its name from \u2013 this means the Firefox logo is actually a red panda, not a fox!",
+        "type": "Technology"
+      },
+      {
+        "fact": "In 1994, the company who had a patent on GIFs tried to charge a fee for using GIFS. The PNG was invented as an alternative, and the company backed down.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The very first Apple logo featured Sir Isaac Newton sitting underneath a tree, with an apple about to hit his head.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Google rents out goats from a company called California Grazing to help cut down the amount of weeds and brush at Google HQ!",
+        "type": "Technology"
+      },
+      {
+        "fact": "The founder of Microsoft, Bill Gates, was a college drop out.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Bill Gates house was designed using a Macintosh Computer.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The word robot comes from the Czech \u201crobota\u201c. This translates into forced labor, or work.",
+        "type": "Technology"
+      },
+      {
+        "fact": "CD\u2019s (Compact discs) read from the inside to the outside edge, which is the reverse of how records work.",
+        "type": "Technology"
+      },
+      {
+        "fact": "You cannot reverse a Bitcoin transaction, or be forced to pay.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The average computer user blinks seven times a minute, the normal rate is twenty times per minute.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The first ever VCR (Video Camera Recorder), which was made in 1956, was the size of a piano!",
+        "type": "Technology"
+      },
+      {
+        "fact": "On an average work day, a typist\u2019s fingers travel about 12.6 miles.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The 30th of November is known as \u201cComputer Security Day\u201c.",
+        "type": "Technology"
+      },
+      {
+        "fact": "On 1st April 2005, NASA pulled a prank telling the world that they had found water on Mars.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The radio took 38 years to reach a market audience of 50 million. The television took 13 years and the\u00a0iPod only took 3 years to reach a market audience of 50 million.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Using a hands-free device to talk on the phone while driving is shown to be equally or more dangerous than driving drunk.",
+        "type": "Technology"
+      },
+      {
+        "fact": "If you were to have your picture taken by the very first camera, you\u2019d need to sit still for 8 hours.",
+        "type": "Technology"
+      },
+      {
+        "fact": "A dentist named Alfred Southwick invented the electric chair.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The creators of the PNG file format wanted it to be pronounced as \u2018ping\u2019.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Credit card EMV chip technology has been around since 1986. It was first implemented in France, with Germany following shortly after.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Alaska is the only state in America that can be typed on one row of a traditional English QWERTY keyboard.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The Apple II had a hard drive of only 5 megabytes when it was launched in June 1977.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Q33 was the first plane to hit during 9/11 in 2001, when you type in Q33 in Microsoft\u2019s Wingding\u2019s font, a very sinister thing appears; Q33",
+        "type": "Technology"
+      },
+      {
+        "fact": "In general, people tend to read as much as 10% slower from a screen than from paper.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Although GPS is free for the world to use, it costs $2 million per day to operate. The money comes from American tax revenue.",
+        "type": "Technology"
+      },
+      {
+        "fact": "There are computers designed for Amish people, with selling points like \u201cNo internet, no video, no music\u201d.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Ubuntu is one of the more popular distributions of Linux. The word Ubuntu comes from an African word meaning \u201cI am because of you\u201d.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The Name \u201cMacintosh\u201d Was Inspired by an Apple with the name \u201cmcintosh\u201d.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Christopher Sholes invented the QWERTY keyboard in 1868. In 1932 Professor August Dvorak created the Dvorak keyboard, which was made to be superior to the standard QWERTY keyboard.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Doug Engelbart created the very first computer mouse from wood in 1964.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Spam mail got its name from the canned meat after a Monty Python skit that made fun of Spam as tasting \u201chorrible and being ubiquitous and inescapable.\u201d",
+        "type": "Technology"
+      },
+      {
+        "fact": "In June 1983, the Apple Lisa was released; it was the first commercial computer with a graphical user interface (GUI) and a mouse.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The original Xbox contained edited snippets of actual transmissions from the Apollo missions.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In 1822, Charles Babbage created the first computer.",
+        "type": "Technology"
+      },
+      {
+        "fact": "1024 Gigabytes is equal to 1 Terabyte. 1024 Terabytes is equal to 1 Petabyte, and 1 Petabyte\u00a0can hold 13.3 years of HD-TV video.",
+        "type": "Technology"
+      },
+      {
+        "fact": "86% of people try to plug their USB devices upside down.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The last game for the Sega Mega Drive was released in 2010 and was so popular it sold out before release.",
+        "type": "Technology"
+      },
+      {
+        "fact": "During the first live iPhone presentation, Steve Jobs had to frequently switch phones behind his desk. Otherwise, it would run out of RAM and crash.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The first alarm clock could only ring at 4 a.m.",
+        "type": "Technology"
+      },
+      {
+        "fact": "A Welshman threw away a hard drive containing a staggering sum of 7,500 bitcoins. The sum equates to almost $32 million and the man will never be able to retrieve it as it was already buried under a hefty 25,000 cubic meters of rubbish in 2013.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The average age of gamers in the United States is 35.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In 2010, the United States Air Force used 1,760 PlayStation 3\u2019s to build a supercomputer for the Department of Defense. They used PS3\u2019s because it was more cost efficient and \u201cgreen\u201d.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The Sega Dreamcast was the first 128-bit console in the market. It was released in 1999 and was\u00a0the first console which allowed real-time online play.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Surgeons who grew up playing video games make 37% fewer mistakes.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Nintendo was started in 1889 as a playing card company.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The astronauts of Apollo 11 couldn\u2019t get life insurance, so instead they signed photos that their families could auction in case the landing went wrong.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In January 2007, the PS3 DualShock controller won an Emmy Award for \u2018Peripheral Development and Technological Impact of Video Game Controllers\u2019 by The National Academy of Television Arts & Sciences.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In mobile games, 60% of all revenue came from only 0.23% of players.",
+        "type": "Technology"
+      },
+      {
+        "fact": "When signing up to iTunes, if you accept their Terms & Conditions, you agree to not use it to make nuclear weapons.",
+        "type": "Technology"
+      },
+      {
+        "fact": "2.1 million people still use AOL 56k dial-up in the U.S.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The Atari 2600 was originally called \u201cAtari Video Computer System\u201d, or \u201cVCS\u201d.",
+        "type": "Technology"
+      },
+      {
+        "fact": "When Snapchat launched in 2011, it was named Picaboo, but in 2012, it was renamed to Snapchat.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In 2004, the \u201cat\u201d symbol used in emails (@) became the first new character to be added to Morse code in several decades! The new character, known as the \u201cCommat\u201d consists of the signals for both A (dot-dash), and C (dash-dot-dash-dot) with no space or break in between.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The very first domain name registered was www.symbolics.com, on the 15th March, 1985.",
+        "type": "Technology"
+      },
+      {
+        "fact": "According to the Message Anti-Abuse Working Group, between 88% and 92% of all emails that were sent in the first half of 2010 were spam.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Anthony Greco was the first man ever arrested for sending spam messages in 2005.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In May 2017, Samsung were given permission to carry out trials of a self-driving car in South Korea.",
+        "type": "Technology"
+      },
+      {
+        "fact": "All the letter combinations from aaa.com to zzz.com have already been registered.",
+        "type": "Technology"
+      },
+      {
+        "fact": "On eBay, there is an average of $680 worth of transactions every second.",
+        "type": "Technology"
+      },
+      {
+        "fact": "It is estimated that spammers only receive 1 reply for every 12 million emails that they send out.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The domain name www.YouTube.com was registered 14th February 2005.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Amazon now sells more eBooks than it does printed books!",
+        "type": "Technology"
+      },
+      {
+        "fact": "Amazon.com was previously known as Cadabra.com.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The first ever Internet Service Provider (ISP) was a company named CompuServe.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The original URL for Yahoo was http://akebono.stanford.edu",
+        "type": "Technology"
+      },
+      {
+        "fact": "The name Yahoo was created by Jonathan Swift for his book Gulliver\u2019s Travels (1726) \u2013 which explained a \u201cyahoo\u201d to be a really ugly person.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Klingon was added as a Google language option in 2002.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The first country to build drones was Israel, with Israel Aerospace Industries heading the charge in terms of export numbers.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In 1984, the number of internet devices reached 1,000. By\u00a01992, it reached 1 million, and in\u00a02008, the number of internet devices reached 1 billion!",
+        "type": "Technology"
+      },
+      {
+        "fact": "In 1999, PayPal was voted as one of the top ten worst business ideas.",
+        "type": "Technology"
+      },
+      {
+        "fact": "97% of people type in random words on Google, just to see if they spelled it right.",
+        "type": "Technology"
+      },
+      {
+        "fact": "There are over 35 billion Google searches every month.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The first word that was ever auto-corrected was \u201cteh\u201d to \u201cthe\u201d. You corrected it by pressing the left arrow and F3.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In 1993, Soviet cosmonaut Aleksandr A. Serebrov took his Nintendo Game Boy to space, on the TM-17 space mission. Later, it was auctioned for $1,220 and is said to have orbited Earth 3,000 times.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The word \u201cAndroid\u201d means a human with a male robot appearance.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In 2000, the FIFA 2001 game used Scratch & Sniff technology on their discs; it had the scent of a football stadium turf on the disc.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Phantom Vibration Syndrome is the name given when someone thinks their phone is vibrating but isn\u2019t.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The Comic Sans font is widely known as the world\u2019s most hated font.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Apple have a \u2018no smoking\u2019 ban regarding their computers, which means if you smoke while using an Apple computer, you void the warranty.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Using your phone while it is on charge can damage the battery; this is why the leads for the chargers are so short.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In 1973, the very first mobile phone call was made by Martin Cooper, who was an employee of Motorola. The call was made from the streets of New York City.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Nokia was founded in 1865 and its primary business was manufacturing paper. Nokia\u2019s first mobile phones were released in the 1980\u2019s.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The first commercial text message was sent in December 1992.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Technophobia is the fear of technology.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Almost half the world\u2019s population has never made a phone call.",
+        "type": "Technology"
+      },
+      {
+        "fact": "There are Braille accessories for smart phones.",
+        "type": "Technology"
+      },
+      {
+        "fact": "The most expensive number ever sold was a mobile phone number, 666-6666, which was put up for auction and sold for $2.7 million!",
+        "type": "Technology"
+      },
+      {
+        "fact": "Originally, the design for the first iPhone was literally the shape of an apple.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Facebook has a blue color scheme because the creator, Mark Zuckerberg cannot see the colors red & green.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Around 20% of all YouTube videos are music related.",
+        "type": "Technology"
+      },
+      {
+        "fact": "If you find a security bug in Facebook\u2019s code, they are willing to pay from $500 for you to tell them about it!",
+        "type": "Technology"
+      },
+      {
+        "fact": "It is estimated that one in every eight couples in the U.S. who went on to marry each other met online.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Someone on Twitter who has a million or more followers is known as a \u201cTwillionaire\u201d.",
+        "type": "Technology"
+      },
+      {
+        "fact": "In the 1990\u2019s, the Japanese company Hitachi-Omron Terminal Solutions created an ATM machine that heats bills to 200\u00b0C so that bacteria is killed before dispensing them.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Google\u2019s first ever Tweet on Twitter was in February 2009, and reads \u201cI\u2019m 01100110 01100101 01100101 01101100 01101001 01101110 01100111 00100000 01101100 01110101 01100011 01101011 01111001 00001010.\u201d Translating from binary into English, this tweet says \u201cI\u2019m feeling lucky.\u201d",
+        "type": "Technology"
+      },
+      {
+        "fact": "Google+ was developed under the code name \u2018Emerald Sea\u2019.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Remember MySpace? Well it still has over 200 million registered users.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Facebook took 2 years to reach a market audience of 50 million.",
+        "type": "Technology"
+      },
+      {
+        "fact": "60% of LinkedIn members have clicked one of their adverts.",
+        "type": "Technology"
+      },
+      {
+        "fact": "Spending 1 hour a day on Social Media reduces the probability of a child being completely happy with their life by 14%.",
+        "type": "Technology"
+      }
+    ]
+  }

@@ -1,0 +1,1596 @@
+{
+    "Facts": [
+      {
+        "fact": "Mercury and Venus are the only two planets in our solar system that do not have any moons.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If a star passes too close to a black hole, it can be\u00a0torn apart.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The hottest planet in our solar system is Venus. Most people often think that it would be Mercury, as it\u2019s the closest planet to the sun. This is because Venus has a lot of gasses in its atmosphere, which causes the \u201cGreenhouse Effect.\u201d",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The solar system is around 4.6 billion years old. Scientists estimate that it will probably last another 5,000 million years.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Enceladus, one of Saturn\u2019s smaller moons, reflects some 90% of the sunlight, making it more reflective than snow.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The highest mountain known to man is the Olympus Mons, which is located on Mars. Its peak is 15 miles (25 km) high, making it nearly 3 times higher than Mount Everest.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Whirlpool Galaxy (M51) was the very first celestial object to be identified as being spiral.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A light-year is the distance covered by light in a single year; this is equivalent to 5.88\u00a0trillion\u00a0miles (9.5 trillion km).",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The width of the Milky Way is around 100,000 light-years.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Sun is over 300,000 times larger than Earth.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Footprints and tire tracks left by astronauts on the Moon won\u2019t disappear as there is no wind to blow them away.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Because of lower gravity, a person who weighs 220 lbs. (100 kg) on Earth would only weigh 84 lbs. (38 kg) on the surface of Mars.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Scientists believe there are 67 moons that orbit Jupiter, however only 53 of these have been named. Jupiter also has the most moons in our galaxy.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Martian day is 24 hours 39 minutes and 35 seconds long.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "NASA\u2019s Crater Observation and Sensing Satellite (LCROSS) declared that they have found evidence of significant amounts of water on the Earth\u2019s Moon.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Sun makes a full rotation once every 25-35 days.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Earth is the only planet not named after a god.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The force of gravity can sometimes cause comets to tear apart.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It is thanks to the Sun and our own moons gravity that we have high and low tides.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Pluto is smaller than the Earth\u2019s moon. It\u2019s even smaller in diameter than the United States.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "According to mathematics, white holes are possible, although as of yet we have found none.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Our moon is around 4.5 billion years old.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are more volcanoes on Venus than any other planet within our solar system.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Uranus\u2019 blue glow is down to the methane in its atmosphere, which filters out all the red light.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The four planets in our solar system that are known as gas giants are Jupiter, Neptune, Saturn and Uranus.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Uranus has 27 moons that have been discovered so far. It has 5 large moons, and 22 small moons. Titania is the largest of the moons.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Because of its unique tilt, a single night on Uranus is equivalent to 21 Earth years.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Triton, one of Neptune\u2019s moons, is gradually getting closer to the planet it orbits.\u00a0Scientists believe that eventually Triton will get so close to Neptune, it will be torn apart by gravity, and Neptune could end up with more rings than Saturn currently has.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The only large moon in our solar system to orbit in the opposite direction of its planet is Neptune\u2019s moon, Triton.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are more stars in space than there are grains of sand on every beach in the world.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Neptune takes 164.79 years (60,190 days) to make one orbit of the Sun. this means that since its discovery in 1846, it has only completed just one orbit!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Charon is one of the moons of Pluto, and is only slightly smaller than Pluto itself.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Space Station is the largest manned object ever sent into space.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A day on Pluto lasts for 6 days and 9 hours.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Saturn is the second largest planet in our solar system. It has a radius of 36,184 miles (58,232 km).",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Any free-moving liquid in outer space will form itself into a sphere, because of its surface tension.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Earth, Mars, Mercury and Venus are called the inner planets as they are closest to the sun.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "We know more about space than we do about deep in our oceans.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The only satellite that Britain has launched was called Black Arrow.\u00a0Black Arrow was developed during the 1960\u2019s and was used for four launches between 1969 and 1971.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "68% of the universe is dark energy, and 27% is dark matter; both are invisible, even with a telescope. This means we have only seen 5% of the universe from earth.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The light takes 8.3\u00a0minutes to travel from the Sun the Earth.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "At any given moment, there are 1,800 thunderstorms happening on Earth. This amounts to 16 million storms each year.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Earth\u2019s revolution time increases .0001 seconds annually.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If you were driving at 75 miles (121 km) per hour, it would take 258 days to drive around one of Saturn\u2019s rings.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Neil Armstrong was the first man to walk the moon, on 20th July 1969. He\u00a0first stepped on the moon with his left foot.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Space Station circles the earth every 90 minutes.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Stars seem to twinkle in the night sky due to the light being disrupted as it passes though the Earth\u2019s atmosphere.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "We always see the same side of the Moon, no matter where we stand on Earth.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are three main types of galaxies out in space, and they are spiral, elliptical, and irregular.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are approximately 200 billion stars in the Milky Way.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In the northern skies, you are able to see two galaxies. These are the Andromeda Galaxy (M31), and the Triangulum Galaxy (M33).",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In 2016, scientists detected a radio signal from a source 5 billion light-years away. This means that when the signal started its journey, Earth didn\u2019t even exist.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The closest galaxy to us is the Andromeda Galaxy, it\u2019s estimated to be 2.537 million light-years away.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The first Supernovae observed outside of our own galaxy was the S Andromeade, in the Andromeda galaxy in 1855.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Andromeda Galaxy appears in the night sky as a smudge of light, and is in fact the furthest away object in the night sky that you can see with your eyes.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The distance between the Sun and Earth is defined as an Astronomical Unit or AU for short.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The second man on the moon was Buzz Aldrin.\u00a0\u201cMoon\u201d was Aldrin\u2019s mother\u2019s maiden name.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "On Venus, it snows metal and rains sulphuric acid.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Mariner 10 is the only spacecraft that has ever visited the planet Mercury. It managed to take pictures of about 45% of the surface.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If you shouted in space even if someone was right next to you they wouldn\u2019t be able to hear you. This is because there is no air in space, and air is needed to carry the sound vibrations.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Coca-Cola was the first drink that was ever consumed in space.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Due to the lack of gravity in space, astronauts can grow approximately two inches (5 cm) in height.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Kuiper Belt is a region of the Solar System beyond the orbit of Neptune.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The first woman in space was a Russian called Valentina Tereshkova.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If Saturn\u2019s rings were a meter long, they would be 10,000 times thinner than a razorblade.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "As of spring 2011, the Hubble Space Telescope had travelled around the globe over 115,000 trips. This equates to over 3.1 billion miles (around 5 billion km), or the length of a trip to Neptune from Earth.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The first artificial satellite in space was called \u201cSputnik.\u201d",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The furthest away galaxy from Earth, that has been discovered, is GRB 090423, which is 13.6 billion light years away! This means that the light we see from it began its journey only 600,000 years after the Universe was created!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The center of the Milky Way smells like rum and tastes like raspberries.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Our moon is moving away from Earth at a rate of 1.6 inch (4 cm) per year!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Pluto is named after the Roman god of the underworld, not the Disney Dog.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Inside an astronaut\u2019s spacesuit helmet, there is a Velcro patch. The only purpose for this is to help the astronauts with an itch.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "When fully constructed, the Space Station will be visible for more than 90% of the Earth\u2019s population.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Although Saturn is the second largest planet in our solar system, it is also the lightest planet!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Asteroids are the byproducts of formations in the solar system, more than 4 billion years ago.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Astronauts can\u2019t burp in space. The liquids and gasses in your stomach don\u2019t separate in zero gravity.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It\u2019s impossible to whistle in a spacesuit.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Uranus was originally called \u201cGeorge\u2019s Star.\u201d The name \u201cUranus\u201d was proposed in 1782, but not official until 1850.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A sunset on Mars is blue.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Saturn\u2019s density is low enough that the planet would float in water.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The mass of the Moon is about one-eightieth of the Earth\u2019s mass.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The first living mammal to ever go into space was a dog named \u201cLaika\u201d from Russia.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The term \u201castronaut\u201d is derived from the Greek words \u201c\u00c3\u00a1stron\u201d, meaning \u201cstar\u201d, and \u201cnautes\u201d, which means \u201csailor\u201d. So, the word astronaut means star sailor!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "\u201cNASA\u201d stands for National Aeronautics and Space Administration.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Sergei K. Krikalev has spent more time in space than anyone else. He has racked up a total of 803 days, 9 hours and 39 minutes, which is equivalent to 2.2 years!\u00a0He retired from spaceflight in 2007.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Mercury has no atmosphere which means there is no wind or weather.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In China, the Milky Way is known as the \u201csilver river.\u201d\u00a0 In Japan and Korea \u201csilver river\u201d means galaxies in general, not just the Milky Way.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Red Dwarf stars that are low in mass can burn continually for up to 10 trillion years!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There is an estimated 2 x 1023 stars in space. In English, this is: 200,000,000,000,000,000,000,000,000,000!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Scientists used to believe that the same side of Mercury always faced the Sun. However, in 1965 astronomers discovered that the planet rotates three times during every two orbits it makes.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Jupiter is known as the dumping grounds for our solar system, as a large percentage of asteroids are pulled in by Jupiter\u2019s gravity.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A day on Mercury is equivalent to 58 Earth days, and a year is equivalent to 88 days.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "As space has no gravity, normal pens won\u2019t work.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "On average it takes the light only 1.3 seconds to travel from the Moon to the Earth.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are 88 recognized star constellations in our night sky.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The center of a comet is called a nucleus.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "As early as 240 B.C. the Chinese began to document the appearance of Halley\u2019s Comet.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In 2006, the International Astronomical Union reclassified Pluto as a dwarf planet.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are 5 dwarf planets officially recognised in our Solar System, these are: Ceres, Pluto, Eris,\u00a0Haumea and Makemake.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Buzz Lightyear (from Toy Story) has actually been out in space! He has spent 15 months on board the International Space Station, and returned to Earth on the 11th September, 2009.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know $30 of raw popcorn translates into $3,000 in sales at movies threaters?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "You can't fold a piece of paper in HALF more than seven times.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A single drop of water contains one hundred billion billion atoms.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "\"Dreamt\" is only English word that ends in the letters \"mt\"!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Seat belts became mandatory on U.S. cars on March 1, 1968.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Every Alaskan citizen over the age of 6 months receives an oil dividend check of about $1000 per year!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Men have nipples because, as an embryo, everyone is a female until the Y chromosome kicks in.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There's enough water pressure in one onion cell to cause a steam engine to explode.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A lightning bolt generates temperature five times hotter than those found at the sun's surface.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Manatees possess vocal chords which give like humans, but don't do so because they have no ears with which to hear the sound. ",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "\"Mountain Dew\" is an old slang term for moonshine.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A person's ashes can be turned into a diamond.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know Mars appears red because it's covered in rust?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Babies are born without kneecaps. They don't appear until the child reaches 2-6 years of age.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know the Amazon rainforest produces half the world's oxygen supply?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The attachment of the human skin to muscles is what causes dimples.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Forty percent of American population has never visited a dentist.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Dogs and humans are the only animals with prostates.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "During his or her lifetime, the average human will grow 590 miles of hair.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know your feet and your forearm are the same length?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The bloodhound is the only animal whose evidence is admissible in an American court.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Apple seeds are poisonous Did you know the most common disease is tooth decay?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Hugh jackman went through approximately 700 claws as the part of Wolverine in X-Men.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The universally popular hershey bar was used overseas during World War II as currency.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Mexico has more American residents than any other country except the United States.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The heaviest baby weighed 23Ib, 12oz, but did not survive birth. The heaviest baby who survived birth weighed 22lb, 8oz.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Your smell is unique: your body odor is unique to you unless you have an identical twin. Even babies recognize the individual scents of their mothers.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The only domestic animal not mentioned in the Bible is the eat.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Bank of America was originally called the Bank of Italy until the founder, Amedeo Giannini, changed the name is 1930.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The infinity sign is called  lemniscate.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Time slows down near a black hole; inside it stops completely.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "At 4,145 miles, the Nile River is the longest in the world.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "House flies have a lifespan of two weeks.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Camel milk does not curdle.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The name Wendy was made up for the book Peter Pan. There was never a recorded Wendy before it.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know the Hawaiian alphabet has 12 letters?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Muhammad is the most common first name in the world.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Only female mosquitoes bite.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Each year 96 million pounds of food is wasted in the U.S.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "When the moon is directly over your head, you weigh slightly less.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Gold is about eight times heavier than any other mental on earth.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Only food that does not spoil: honey.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The first non-human to win an Oscar was Mickey Mouse.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The human brain stops growing at the age of 18.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Intelligent people have more zinc and copper in their hair",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The average woman spends 1 year of her lifetime trying to decide what to wear!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The honeybee kills more people world-wide than all the poisonous snakes combined.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The first cell phone was invented in 1924.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If humans had the same metabolism as a hummingbird, they would have to intake 150,00 calories a day.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The female pigeon cannot lay eggs if she is alone. In order for her ovaries to function, she must be able to see another pigeon.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Dell Computers was started by a 19 year old with only $1,000.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In its ancient form, the carrot was purple, not orange.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A cosmic year is the amount of time it takes the sun to revolve around the center of the Milky Way, about 225 million years.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Fanta Orange is the third largest selling soft drink in the world.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "At 120 miles per hour, a Formula One car generates so much downforce that it can drive upside down on the roof of a tunnel.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Until the 1960s men with long hair were not allowed to enter Disneyland.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Butterflies cannot fly if their body temperature is less than 86 degrees.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Venus is the only planet in the solar system to spin backwards.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "One reason that kittens sleep so much is because a growth hormone is released during sleep.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Moths are unable to fly during an earthquake.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The yin-yang patterns earliest use is in Rome. Not China!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Recycling a 3 foot stack of newspapers can save one whole tree.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If you plant an apple seed, it is almost guaranteed to grow a tree of a different type of apple.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "An elephant can be pregnant for up to two years.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The 1912 Olympics were the last Olympics to give out medals made entirely of gold.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Antarctica has only one ATM machine.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know that clown fish start off as males and later on in their lives develop into females?!?!?!?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A hardboiled egg will spin. An uncooked or soft boiled egg will not.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The nail of our middle finger grows the fastest and the nail of our thumb grows slowest.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It is possible for fetus in the womb to get hiccups",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The swastika was originally a symbol of peace and honor and is still used by Buddhists today.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The most dangerous job in the United States, is that of fisherman, followed by logging and then garbage collection.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know your skin is the largest organ making up the human body?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Wearing headphones for just an hour will increase the bacteria in your ear by 700 times.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Tigers not only have striped fur but they also have striped skin!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know it takes a plastic container over 50,000 years to start decomposing?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "95% of people feel uncomfortable when the TV volume is an odd number.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The earth is presently inhabited by 1.4 million species of animals and 50,000 species of plants.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Walt Disney named Mickey Mouse after Mickey Rooney, whose mother he dated for some time.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The 1st US Minimum Wage Law was instituted in 1938. The minimum age was 25 cents per hour.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know the average person has 10,000 taste buds?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A fetus starts to develop fingerprints at the age of eight weeks.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know Nintendo first produced playing cards?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In the USA - more toilets flush at the halftime of the Super Bowl than at any other time of the year.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The human eye blinks an average of 4,200,000 times a year.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Chewing gum was invented by the Mayans over 300 years ago. They boiled the sap of the sapodilla tree and chewed it.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The average lifespan of a taste bud is 10 days.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The U.S. is the leading producer about 20% of the world\u2019s strawberries.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "We lose half a litre of water a day through breathing. This is the water vapour we see when we breathe onto glass.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Koalas almost never drink water. They get fluids from the eucalyptus leaves they eat.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If you take you age and multiply it by 7, then multiply by 1,4443 the product repeats your age 3 times.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The average computer user blinks 7 times a minute, less than half the normal rate of 20.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It is considered rude to tip in Iceland.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Humans have 46 chromosomes, peas have 14 and crayfish have 200.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "For every M&M you eat you have to run the length of a football field to burn it off.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Months that start with a Sunday always has a Friday 13th.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The moon is moving away from the Earth at a tiny, although measurable, rate every year. 85 million years ago it was orbiting the Earth about 35 feet from the planet's surface.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The only king in a deck of playing cards without a mustache is the king of Hearts.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "When Burger King introduced the Whopper Sandwich in 1957, it cost only 37 cents.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There is no ice covering Iceland.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "One quarter of the bones in your body, are in your feet.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know over 500 meteorites hit the Earth each year?",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Atlantic Oceans has a greater content than the pacific Ocean.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The heat from a nuclear explosion is hotter than the surface of the sun!",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Did you know almonds are members of the peach family.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Men can read smaller print than women; women can hear better.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "An average person will spend 25 years asleep.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "1 gigayear = 1,000,000,000 years",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The dishwasher was invented in 1889",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "95% of the cells in the human body are bacteria",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The sun orbits around the Milky Way at the speed of about 220 km(140 miles) per second",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Humans can outrun almost every other animal on earth over long distances.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Your favorite song is probably your favorite because you associate it with an emotional event in your life",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Queen Elizabeth II served as a mechanic and driver in World War II",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Antarctica is the coldest, windiest, highest and driest continent on Earth",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "New Brain Connections are created Every time you form a Memory",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It would take less than 6 months to get to the Moon by a car at 60mph(95km/h)",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Humans and dogs first became best friends 30,000 years ago.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Afternoon naps make you smarter",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Hippopotamuses are born underwater",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A full moon is 9 times brighter than half moon",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Grasshoppers have white blood",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are no rivers in Saudi Arabia",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It took Leonardo Da Vinci 10 years to paint Mona Lisa",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If your DNA was stretched out, it would reach to the moon 6,000 times",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The typewriter was invented in 1829",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Liquid oxygen is blue in color",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "At any given time, there are 1,800 thunderstorms in progress over the earth's atmosphere.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Horses can't vomit.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Crocodiles and alligators are surprisingly fast on land. Although they are rapid, they are not agile, so if you ever find yourself chased by one, run in a zigzag line. You'll lose him or her every time.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It is almost impossible to break an egg by squeezing both its ends.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A macaque monkey took a selfie that ended up on Wikipedia. Though the camera owner asked to have it taken down, claiming copyright infringement, Wikimedia disagreed and kept the photo up.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "You can not see your own eyes in motion when looking in a mirror since, as your eyes move, your brain automatically blocks blurred images, making you blind at these moments.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Cherenkov radiation is like the sonic boom of light. Charged particles that move faster than the phase of velocity of light, emit brilliant blue electromagnetic radiation.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A typical used mattress contains from 100,000 to 10 million dust mites.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Some African and American tribes insert progressively larger plates into their lips, which can reach over 8 inches in diameter.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "When you jump, you actually move the whole earth a tiny bit.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Sea otters sometimes hold hands while sleeping to keep from drifting apart.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Getting closer to the ground causes the earth to spin a tiny bit faster, which causes the day to be a tiny bit shorter.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Retired basketball sensation Michael Jordan makes more money from Nike each year than all the Nike factory workers in Malaysia combined.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The average lifespan of a major league baseball: 7 pitches.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Dueling is legal is Paraguay as long as both parties are registered blood donors.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "All major league baseball umpires must wear black underwear while on the job in case their pants split.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In 1920, Babe Ruth out-homered very American League team.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Babe Ruth wore a cabbage leaf under his cap to keep his head cool. He changed it every two innings.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Every year 56,000,000 people attend major league baseball games.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In 18th century England, gambling dens employed someone whose job was to swallow the dice if there was a police raid.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A Costa Rican worker who makes baseballs earns about $2,750 annually. The average American pro baseball player earns $2,377,000 per year.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are 336 dimples on a regulation golf ball.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The star Antares is 60,000 times larger than our sun. If our sun were the size of a softball, the star Antares would be as large as a house.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In Calama, a town in the Atacama Desert of Chile, it has never rained.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Erosion at the base of Niagara Falls has caused the falls to recede approximately seven miles over the past 10,000 years.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If you have three quarters, four dimes, and four pennies you have $1.19. you also have the largest possible amount of money in coins without being able to make change for a dollar.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Leonardo Da Vinci invented scissors.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Recycling one glass jar saves enough energy to operate a television for three hours.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The cigarette lighter was invented before the match.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The main library at Indiana University sinks over an inch a year. When it was designed engineers failed to take into account the weight of all the books that would occupy the building.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A category three hurricane releases more energy in ten minutes that all the world's nuclear weapons combined.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There is enough fuel in full jumbo jet tank to drive an average car four times around the world.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "An average of 100 people choke to death on ballpoint pens every year.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Antarctica is the only continent without reptiles or snakes.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The cruise liner Queen Elizabeth 2 moves only six inches for each gallon of fuel it burns.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "San Francisco cable cars are the only National Monuments that can move.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "February 1865 is the only month in recorded history not to have a full moon.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Nutmeg is extremely poisonous if injected intravenously.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A rainbow can be seen only in the morning or late afternoon. It can occur only when the sun is 40 degrees or less above the horizon.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Lightning strikes the Earth 100 times every second.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "La Paz, Bolivia has an average annual temperature below 50 degrees Fahrenheit. However, it has never recorded a zero-degree temperature. Same for Stanley, the Falkland Islands, and Punta Arenas, Chile.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are over 87,000 Americans on waiting lists for organ transplants.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Catsup leaves the bottle at a rate of 25 miles per year.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Toxic house plants poison more children than household chemicals do.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "You are more likely to be infected by flesh-eating bacteria than you are to be struck by lightning.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "According to Genesis 1:20-22, the chicken came before the egg.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It is physically impossible for you to lick your elbow.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Like fingerprints, everyone's tongue print is different.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Your heart beats over 100,000 times a day.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It takes approximately 12 hours for food to entirely digest.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A sneeze travels out your mouth at over 100 m.p.h.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Women blink nearly twice as often as men.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Most of the dust particles in your house are dead skin.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There is a company that will (for $14,000) take your ashes and compress them into a synthetic diamond to be set in jewelry for a loved one.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are more living organisms on the skin of a single human being than there are human beings on the surface of the earth.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The longest bout of hiccups lasted nearly 69 years.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Babies is born without kneecaps. They appear between the ages of 2 and 6.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Men can read smaller print than women. Women can hear better.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Wearing headphones for just an hour will increase the bacteria in your ear by 700 times.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If you sneeze too hard you can fracture a rib. If you try to suppress a sneeze you can rupture a blood vessel in your head or neck and die. If you keep your eyes open by force they can pop out.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A kiss stimulates 29 muscles and chemicals that cause relaxation. Women seem to like light and frequent kisses while men like them more strenuous.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Every time you lick a stamp, you're consuming 1/10 of a calorie.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Our eyes are always the same size from birth, but our nose and ears never stop growing.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The average person falls asleep in seven minutes.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Almost everyone who reads this will try to lick their elbow.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "According to Chinese acupuncture, there is a point on the head that you can press to control your appetite. It is located in the hollow just in front of the flap of the ear.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In a recent survey, Americans revealed that banana was their favorite smell.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A crocodile cannot stick its tongue out.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Butterflies taste with their feet.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Penguins can jump as high as six feet in the air.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "All polar bears are left-handed.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "An eagle can kill a young deer and fly carrying it.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It's possible to lead a cow upstairs, but not downstairs.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The chicken is one of the few things that man eats before it's born and after it's dead.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Some dogs can predict when a child will have an epileptic seizure and even protect the child from injury. They're not trained to do this, they simply learn to respond after observing at least one attack.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The world's youngest parents were age 8 and 9. They lived in China and had their child in 1910.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Abraham Lincoln's dog, Fido, was also assassinated.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Wayne's World was filmed in two weeks.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "George Lumley, aged 104, married Mary Dunning, aged 10, in Nortallerton, England on August 25, 1783. She was the great-great granddaughter of the woman who'd broken her engagement to Lumley, eighty years before.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In Egypt around 1500 B.C., a shaved head was considered the ultimate in feminine beauty. Egyptian women removed every hair from their heads with special gold tweezers and polished their scalps to a high sheen with buffing cloths.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Hershey's Kisses are called that because the machine that makes them looks like it's kissing the conveyor belt.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are more collect calls on Father's Day than any other day of the year.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The United States has five percent of the world's population, but twenty-five percent of the world's prison population.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The largest ocean liners pay a $250,000 toll for each trip through the Panama Canal. The canal generates fully one-third of Panama's entire economy.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The two-foot long bird called a Kea that lives in New Zealand likes to eat the strips of rubber around car windows.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Snakes are true carnivores as they eat nothing but other animals. They do not eat any type of plant material.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Weddell seal can travel underwater for seven miles without surfacing for air.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "According to tests made at the Institute for the Study of Animal Problems in Washington, D.C., dogs and cats, like people, are either right-handed or left-handed\u2014that is, they favor either their right or left paws.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "An iguana can stay underwater for 28 minutes.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It was discovered on a space mission that a frog can throw up. The frog vomits its entire stomach out so the organ is dangling out of its mouth. Then the frog uses its forearms to dig out all of the stomach's contents and swallows the stomach back down again.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The leg bones of a bat are so thin that no bat can walk.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The katydid bug hears through holes in its hind legs.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Slugs have four noses.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Ostriches stick their heads in the sand to look for water.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In a study of 200,000 ostriches over a period of 80 years there were no reported cases of an ostrich burying its head in the sand.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A shrimp's heart is in its head.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A snail can sleep for three years.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Rats multiply so quickly that in 18 months, two rats could have over a million descendants.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are only three types of snakes on the island of Tasmania and all three are deadly poisonous.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It is physically impossible for pigs to look up into the sky.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Dolphins sleep with one eye open.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A goldfish has a memory span of three seconds.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A shark is the only fish that can blink with both eyes.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Emus and kangaroos cannot walk backwards and are on the Australian coat of arms for that reason.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The jellyfish is 95% water.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A hippo can open its mouth wide enough to fit a 4 foot tall child inside.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Only female mosquitoes bite.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Most elephants weigh less than the tongue of the blue whale.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Kotex was first manufactured as bandages, during WWI.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In the 16th and 17th centuries in the country of Turkey, anyone caught drinking coffee was put to death.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In England, the Speaker of the House is not allowed to speak.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "About 3,000 years ago, most Egyptians died by the time they were 30.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The first known contraceptive was crocodile dung, used by Egyptians in 2000 B.C.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If a statue in the park of a person on a horse has both front legs in the air, the person died in battle. If the horse has one front leg in the air, the person died as a result of wounds received in battle. If the horse has all four legs on the ground, the person died of natural causes.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The youngest pope was 11 years old.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The first Fords had engines made by Dodge.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In Ancient Egypt , priests plucked every hair from their bodies, including their eyebrows and eyelashes.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "More than 8,100 US troops are still listed as missing in action from the Korean War.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "As of January 1, 2004, the population of the United States increases by one person every 12 seconds. There is a birth every eight seconds, an immigrant is added every 25 seconds, and a death every 13 seconds.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Inn the great fire of 1666, half of London was burnt down but only six people were injured.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Toto was paid $125 per week while filming The Wizard of Oz.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The only member of the band ZZ Top without a beard has the last name Beard.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The electric chair was invented by a dentist.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In Elizabethan England, the spoon was so novel and prized that people carried their own folding spoons to banquets.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It costs more to buy a new car today in the United States than it cost Christopher Columbus to equip and undertake three voyages to and from the New World.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Ancient Egyptians slept on pillows made of stone.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Millie the White House dog earned more than four times as President Bush in 1991.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The microwave was invented after a researcher walked by a radar tube and the chocolate bar in his pocket melted.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "23% of all photocopier faults worldwide are caused by people sitting on them and photocopying their butts.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "\"Stewardesses\" is the longest word that is typed using only the left hand.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "71% of office workers stopped on the street for a survey agreed to give up their computer passwords in exchange for a chocolate bar.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The electric chair was invented by a dentist.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "A Boeing 767 airliner is made of 3,100,000 separate parts.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The first FAX machine was patented in 1843, 33 years before Alexander Graham Bell demonstrated the telephone.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "\"Typewriter\" is the longest word that can be made using the keys on only one row of the keyboard.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In 1980, there was only one country in the world with no telephones: Bhutan.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "More than 50% of the people in the world have never made or received a telephone call.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "No word in the English language rhymes with month, orange, silver, or purple.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The \"sixth sick sheik's sixth sheep's sick\" is said to be the",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "toughest tongue twister in the English language.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "\"Go,\" is the shortest complete sentence in the English language.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In England in the 1880s, \"pants\" was considered a dirty word.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are only four words in the English language which end in \"-dous\": tremendous, horrendous, stupendous, and hazardous.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The dot that appears over the letter i is called a \"tittle.\"",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "If you were to spell out numbers, you would you have to go until 1,000 until you would find the letter A.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Montpelier, VT is the only U.S. state capital without a McDonalds.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There is a bar in London that sells vaporized vodka, which is inhaled instead of sipped.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In the White House, there are 13,092 knives, forks, and spoons.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Americans on average eat 18 acres of pizza every day.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Coca-cola was originally green.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The only food that does not spoil: honey.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The Pilgrims ate popcorn at the first Thanksgiving dinner.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Iceland consumes more Coca-Cola per capita than any other nation.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Almonds are members of the peach family.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Cranberry is the only Jello flavor that contains real fruit flavoring.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The drive-through line on opening day at the McDonald's restaurant in Kuwait City, Kuwait was seven miles long at its peak.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "American Airlines saved $40,000 in 1987 by eliminating one olive from each salad served first class.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Celery has negative calories! It takes more calories to eat a piece of celery than the celery has in it to begin with.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "The average American drinks about 600 sodas a year.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Number of US states that claim test scores in their elementary schools are above national average: 50.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "One in every four Americans has appeared on television.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In 1998, more fast-food employees were murdered on the job than police officers.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Title 14, Section 1211, of the Code of Federal Regulations, implemented on July 16, 1969, makes it illegal for U. S. citizens to have any contact with extraterrestrials or their vehicles.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "There are more cars in Southern California than there are cows in India.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Percentage of Americans who say that God has spoken to them: 36.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Average number of people airborne over the US any given hour: 61,000.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Portion of land in the US owned by the government: 1/3.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Ninety percent of New York City cabbies are recently arrived immigrants.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "In 21 states, Wal-Mart is the single largest employer.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "It's against the law in Kansas to catch fish with your bare hands.",
+        "type": "Random Fact"
+      },
+      {
+        "fact": "Maine is the only state a one-syllable name.",
+        "type": "Random Fact"
+      }
+    ]
+  }
