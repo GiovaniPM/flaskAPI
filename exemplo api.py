@@ -2,14 +2,30 @@
 from __future__ import print_function
 from flask import Flask, jsonify, abort, request
 from flask_cors import CORS, cross_origin
+from flask_httpauth import HTTPBasicAuth
+from werkzeug.security import generate_password_hash, check_password_hash
 
 import logging
 import cx_Oracle
 import os
 
 app = Flask(__name__)
+auth = HTTPBasicAuth()
 CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
+
+@auth.get_password
+def get_password(username):
+    #print(generate_password_hash('python'))
+    if username == 'miguel':
+        return 'python'
+    if username == 'giovanipm':
+        return 'loco'
+    return None
+
+@auth.error_handler
+def unauthorized():
+    return jsonify( { 'error': 'Unauthorized access' } )
 
 def creatConnection():
     try:
@@ -88,7 +104,7 @@ def employees():
     results = cur.fetchall()	
     cur.close()
     conn.close()
-    return jsonify( results)	
+    return jsonify(results)	
 
 @app.route('/employees/<int:employee_id>', methods=['GET'])
 def get_employee(employee_id):
@@ -100,7 +116,20 @@ def get_employee(employee_id):
         abort(404)
     cur.close()
     conn.close()
-    return jsonify( rv)	
+    return jsonify(rv)	
+
+@app.route('/cic/<int:tax>', methods=['GET'])
+@auth.login_required
+def get_cic(tax):
+    conn = creatConnection()
+    cur = conn.cursor()
+    cur.execute('''SELECT ABAN8, ABAT1, ABALKY, ABALPH FROM PRODDTAXE.F0101 WHERE ABTAX = '%s' '''%(tax))
+    rv = cur.fetchall()    
+    if rv is None:
+        abort(404)
+    cur.close()
+    conn.close()
+    return jsonify(rv)	
 
 @app.route('/employees', methods=['POST'])
 def create_employee():
