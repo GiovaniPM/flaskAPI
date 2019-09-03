@@ -4,6 +4,8 @@ from flask import Flask, jsonify, abort, request
 from flask_cors import CORS, cross_origin
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
+from json import dumps
+from requests import post
 
 import logging
 import cx_Oracle
@@ -14,14 +16,31 @@ auth = HTTPBasicAuth()
 CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
 
-@auth.get_password
-def get_password(username):
-    #print(generate_password_hash('python'))
-    if username == 'miguel':
-        return 'python'
-    if username == 'giovanipm':
-        return 'loco'
-    return None
+# @auth.get_password
+# def get_password(username):
+#     if username == 'miguel':
+#         return 'python'
+#     if username == 'giovanipm':
+#         return 'loco'
+#     return None
+
+@auth.verify_password
+def verify_password(username, password):
+    api_url = 'http://api.corp-app-hlg.rbs.com.br/ad/user'
+    group_list = ["G-INT-Colaboradores"]
+    headers = {'Content-type': 'application/json'}
+    data_dict_to_be_send = {
+                "login": username,
+                "password": password,
+                "adgroup": group_list,
+                "application": "PortalApis"}
+    data_json_format = dumps(data_dict_to_be_send, ensure_ascii=False)
+    r = post(api_url, data=data_json_format, headers=headers)
+    output_req = "%s" % r
+    if output_req != '<Response [200]>':
+        return False
+    else:
+        return True
 
 @auth.error_handler
 def unauthorized():
