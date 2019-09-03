@@ -107,8 +107,8 @@ def create_employee():
     conn = creatConnection()
     cur = conn.cursor()
     try:
-        cur.execute('''INSERT INTO EMPLOYEE (FIRSTNAME, LASTNAME, EMAIL, PHONE, BIRTHDATE, TITLE, DEPARTMENT) 
-	                VALUES('%s','%s','%s','%s','%s','%s','%s') '''%(request.json['firstName'],request.json['lastName'],
+        cur.execute('''INSERT INTO EMPLOYEE (ID, FIRSTNAME, LASTNAME, EMAIL, PHONE, BIRTHDATE, TITLE, DEPARTMENT) 
+	                VALUES('%s','%s','%s','%s','%s','%s','%s','%s') '''%(request.json['id'],request.json['firstName'],request.json['lastName'],
 				    request.json['email'],request.json['phone'],request.json['birthDate'],request.json['title'],request.json['dept']))    
         conn.commit()
         message = {'status': 'New employee record is created succesfully'}
