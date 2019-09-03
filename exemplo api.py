@@ -4,7 +4,7 @@ from flask import Flask, jsonify, abort, request
 from flask_cors import CORS, cross_origin
 
 import logging
-import pymysql
+import cx_Oracle
 import os
 
 app = Flask(__name__)
@@ -12,17 +12,49 @@ CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
 
 def creatConnection():
-    # Read MySQL Environment Parameters
-    connectString = os.environ.get('MYSQLCS_CONNECT_STRING', 'localhost:3306/myDB') 
-    hostname = connectString[:connectString.index(":")]
-    database = connectString[connectString.index("/")+1:]
-    conn = pymysql.connect(host=hostname, 
-	                       port=int(os.environ.get('MYSQLCS_MYSQL_PORT', '3306')), 
-						   user=os.environ.get('MYSQLCS_USER_NAME', 'root'), 
-						   passwd=os.environ.get('MYSQLCS_USER_PASSWORD', ''), 
-						   db=database,
-						   cursorclass=pymysql.cursors.DictCursor)
-    return conn;
+    try:
+        db_host = os.environ['DB_HOST']
+    except Exception:
+        db_host = 'ora12cdev-scan.rbs.com.br'
+    try:
+        db_port = int(os.environ['DB_PORT'])
+    except Exception:
+        db_port = 1544
+    try:
+        db_servicename = os.environ['DB_SERVICENAME']
+    except Exception:
+        db_servicename = 'jdehlg.rbs.com.br'
+    try:
+        db_user = os.environ['DB_USER']
+        db_pass = os.environ['DB_PASS']
+    except Exception:
+        db_user = 'GIOVANI_MESQUITA'
+        db_pass = 'ScQz#waAM5'
+    conn_string = "\
+                   (DESCRIPTION =\
+                        (ADDRESS_LIST =\
+                            (ADDRESS = (PROTOCOL = TCP)\
+                                (HOST = %s)\
+                                (PORT = %s))\
+                            )\
+                        (CONNECT_DATA =\
+                            (SERVICE_NAME = %s)\
+                        )\
+                    )" % (db_host, str(db_port), db_servicename)
+    return cx_Oracle.connect(user=db_user, password=db_pass, dsn=conn_string, encoding='UTF-8')
+
+# def creatConnection():
+#     # Read MySQL Environment Parameters
+#     connectString = os.environ.get('MYSQLCS_CONNECT_STRING', 'localhost:3306/myDB') 
+#     hostname = connectString[:connectString.index(":")]
+#     database = connectString[connectString.index("/")+1:]
+#     conn = pymysql.connect(host=hostname, 
+# 	                       port=int(os.environ.get('MYSQLCS_MYSQL_PORT', '3306')), 
+# 						   user=os.environ.get('MYSQLCS_USER_NAME', 'root'), 
+# 						   passwd=os.environ.get('MYSQLCS_USER_PASSWORD', ''), 
+# 						   db=database,
+# 						   cursorclass=pymysql.cursors.DictCursor)
+#     return conn;
 
 @app.route('/')
 def index():
@@ -33,7 +65,7 @@ def setupDB():
     conn = creatConnection()
     cur = conn.cursor()
     cur.execute('''CREATE TABLE EMPLOYEE (
-				  ID INTEGER NOT NULL AUTO_INCREMENT,
+				  ID INTEGER NOT NULL,
 				  FIRSTNAME VARCHAR(255),
 				  LASTNAME VARCHAR(255),
 				  EMAIL VARCHAR(255),
@@ -42,7 +74,7 @@ def setupDB():
 				  TITLE VARCHAR(255),
 				  DEPARTMENT VARCHAR(255),
 				  PRIMARY KEY (ID)
-				  ); ''') 
+				  ) ''') 
     conn.commit()
     cur.close()
     conn.close()
