@@ -142,7 +142,24 @@ def get_employee(employee_id):
 def get_cic(tax):
     conn = creatConnection()
     cur = conn.cursor()
-    cur.execute('''SELECT ABAN8, ABAT1, ABALKY, ABALPH FROM PRODDTAXE.F0101 WHERE ABTAX = '%s' '''%(tax))
+    sql_string = '''SELECT\
+                        ABAN8,\
+                        ABAT1,\
+                        ABALKY,\
+                        ABALPH,\
+                        ALADD1,\
+                        ALADD2,\
+                        ALADDZ,\
+                        ALCTY1,\
+                        ALADDS,\
+                        ALCTR\
+                    FROM\
+                        PRODDTAXE.F0101\
+                    INNER JOIN PRODDTAXE.F0116\
+                        ON ALAN8 = ABAN8
+                    WHERE\
+                        ABTAX = '%s' ''' % (tax)
+    cur.execute(sql_string)
     rv = cur.fetchall()    
     if rv is None:
         abort(404)
