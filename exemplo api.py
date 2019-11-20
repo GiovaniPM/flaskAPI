@@ -156,7 +156,7 @@ def get_cic(tax):
                     FROM\
                         PRODDTAXE.F0101\
                     INNER JOIN PRODDTAXE.F0116\
-                        ON ALAN8 = ABAN8
+                        ON ALAN8 = ABAN8\
                     WHERE\
                         ABTAX = '%s' ''' % (tax)
     cur.execute(sql_string)
