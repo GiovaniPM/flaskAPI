@@ -63,8 +63,8 @@ def creatConnection():
         db_user = os.environ['DB_USER']
         db_pass = os.environ['DB_PASS']
     except Exception:
-        db_user = 'GIOVANI_MESQUITA'
-        db_pass = 'ScQz#waAM5'
+        db_user = 'USER_JDE_QUERY'
+        db_pass = 'djangov1v3'
     conn_string = "\
                    (DESCRIPTION =\
                         (ADDRESS_LIST =\
