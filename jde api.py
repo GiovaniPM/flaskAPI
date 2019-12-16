@@ -38,7 +38,7 @@ def verify_password(username, password):
 def unauthorized():
     return jsonify( { 'error': 'Unauthorized access' } )
 
-def creatConnection():
+def createConnection():
     try:
         db_host = os.environ['DB_HOST']
     except Exception:
@@ -77,7 +77,7 @@ def index():
 @app.route('/cic/<int:tax>', methods=['GET'])
 @auth.login_required
 def get_cic(tax):
-    conn = creatConnection()
+    conn = createConnection()
     cur = conn.cursor()
     sql_string = '''SELECT\
                         ABAN8,\
