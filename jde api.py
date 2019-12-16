@@ -74,7 +74,7 @@ def createConnection():
 def index():
     return 'The application is running!'
 
-@app.route('/cic/<int:tax>', methods=['GET'])
+@app.route('/cic/<tax>', methods=['GET'])
 @auth.login_required
 def get_cic(tax):
     conn = createConnection()
@@ -95,12 +95,34 @@ def get_cic(tax):
                     INNER JOIN PRODDTAXE.F0116\
                         ON ALAN8 = ABAN8\
                     WHERE\
-                        ABTAX = ':par1' '''
-    cur.prepare(sql_string)
-    cur.execute(None, {'par1': tax})
+                        ABTAX = '%s' ''' % (tax)
+    cur.execute(sql_string)
     rv = cur.fetchall()    
     if rv is None:
-        abort(404)
+        abort(204)
+    cur.close()
+    conn.close()
+    return jsonify(rv)	
+
+@app.route('/oc/<cia>/<int:ordem>/<tipo>', methods=['GET'])
+@auth.login_required
+def get_oc(cia, ordem, tipo):
+    conn = createConnection()
+    cur = conn.cursor()
+    sql_string = '''SELECT\
+                        PDLNID,\
+                        PDLITM,\
+                        PDUORG\
+                    FROM\
+                        PRODDTAXE.F4311\
+                    WHERE\
+                        PDKCOO = '%s' AND\
+                        PDDOCO = %s AND\
+                        PDDCTO = '%s' ''' % (cia,ordem,tipo)
+    cur.execute(sql_string)
+    rv = cur.fetchall()
+    if rv is None:
+        abort(204)
     cur.close()
     conn.close()
     return jsonify(rv)	
