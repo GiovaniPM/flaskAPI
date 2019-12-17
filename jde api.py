@@ -112,13 +112,15 @@ def get_oc(cia, ordem, tipo):
     sql_string = '''SELECT\
                         PDLNID,\
                         PDLITM,\
-                        PDUORG\
+                        PDUOM,\
+                        PDUORG,\
+                        PDAEXP/100\
                     FROM\
                         PRODDTAXE.F4311\
                     WHERE\
                         PDKCOO = '%s' AND\
                         PDDOCO = %s AND\
-                        PDDCTO = '%s' ''' % (cia,ordem,tipo)
+                        PDDCTO = '%s' ''' % (cia, ordem, tipo)
     cur.execute(sql_string)
     rv = cur.fetchall()
     if rv is None:
