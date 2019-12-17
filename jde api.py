@@ -74,6 +74,10 @@ def createConnection():
 def index():
     return 'The application is running!'
 
+@app.route('/help')
+def help():
+    return 'This is help!'
+
 @app.route('/cic/<tax>', methods=['GET'])
 @auth.login_required
 def get_cic(tax):
@@ -102,7 +106,7 @@ def get_cic(tax):
         abort(204)
     cur.close()
     conn.close()
-    return jsonify(rv)	
+    return jsonify(rv)
 
 @app.route('/oc/<cia>/<int:ordem>/<tipo>', methods=['GET'])
 @auth.login_required
@@ -127,7 +131,7 @@ def get_oc(cia, ordem, tipo):
         abort(204)
     cur.close()
     conn.close()
-    return jsonify(rv)	
+    return jsonify(rv)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', '8080'))
