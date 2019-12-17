@@ -18,34 +18,6 @@ CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
 loginid = ''
 
-def outputlog(text): # TODO: Ativar modo debug
-    text = str(text)
-    print(loginid," ".join(text.split()))
-
-@auth.verify_password
-def verify_password(username, password):
-    global loginid
-    loginid = username + ' ' + str(datetime.datetime.now().timestamp())
-    api_url = 'http://api.corp-app-hlg.rbs.com.br/ad/user'
-    group_list = ["G-INT-Colaboradores"]
-    headers = {'Content-type': 'application/json'}
-    data_dict_to_be_send = {
-                "login": username,
-                "password": password,
-                "adgroup": group_list,
-                "application": "PortalApis"}
-    data_json_format = dumps(data_dict_to_be_send, ensure_ascii=False)
-    r = post(api_url, data=data_json_format, headers=headers)
-    output_req = "%s" % r
-    if output_req != '<Response [200]>':
-        return False
-    else:
-        return True
-
-@auth.error_handler
-def unauthorized():
-    return jsonify( { 'error': 'Unauthorized access' } )
-
 def createConnection():
     try:
         db_host = os.environ['DB_HOST']
@@ -77,6 +49,34 @@ def createConnection():
                         )\
                     )" % (db_host, str(db_port), db_servicename)
     return cx_Oracle.connect(user=db_user, password=db_pass, dsn=conn_string, encoding='UTF-8')
+
+def outputlog(text): # TODO: Ativar modo debug
+    text = str(text)
+    print(loginid," ".join(text.split()))
+
+@auth.verify_password
+def verify_password(username, password):
+    global loginid
+    loginid = username + ' ' + str(datetime.datetime.now().timestamp())
+    api_url = 'http://api.corp-app-hlg.rbs.com.br/ad/user'
+    group_list = ["G-INT-Colaboradores"]
+    headers = {'Content-type': 'application/json'}
+    data_dict_to_be_send = {
+                "login": username,
+                "password": password,
+                "adgroup": group_list,
+                "application": "PortalApis"}
+    data_json_format = dumps(data_dict_to_be_send, ensure_ascii=False)
+    r = post(api_url, data=data_json_format, headers=headers)
+    output_req = "%s" % r
+    if output_req != '<Response [200]>':
+        return False
+    else:
+        return True
+
+@auth.error_handler
+def unauthorized():
+    return jsonify( { 'error': 'Unauthorized access' } )
 
 @app.route('/')
 def index():
