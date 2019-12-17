@@ -154,5 +154,54 @@ def get_oc(cia, ordem, tipo):
     conn.close()
     return jsonify(rv)
 
+@app.route('/menu/<app>', methods=['GET'])
+@auth.login_required
+def get_menu(app):
+    par = '/menu/' + app
+    outputlog(datetime.datetime.now())
+    conn = createConnection()
+    cur = conn.cursor()
+    sql_string =   "SELECT\
+                        tst.task,\
+                        f9000.tmlngtask,\
+                        f9000.tmobnm,\
+                        f9000.tmver,\
+                        f9000.tmfmnm\
+                    FROM (  SELECT\
+                                caminho,\
+                                substr(CASE WHEN nivel = 1 THEN caminho ELSE replace(caminho, LAG(caminho) OVER(ORDER BY caminho)) END, 2) task,\
+                                nivel\
+                            FROM\
+                                (   SELECT DISTINCT\
+                                        sys_connect_by_path(task, '/') caminho,\
+                                        level nivel\
+                                    FROM (  SELECT\
+                                                f9001.trchildtsk pai,\
+                                                f9001.trparnttsk filho,\
+                                                TRIM(f9000.tmtasknm) task,\
+                                                TRIM(f9000.tmobnm) obj\
+                                            FROM\
+                                                prodctlxe.f9000 f9000\
+                                                INNER JOIN prodctlxe.f9001 f9001 ON f9001.trchildtsk = f9000.tmtaskid\
+                                            WHERE\
+                                                f9000.tmtasknm LIKE 'RBS%')\
+                                    CONNECT BY NOCYCLE\
+                                        PRIOR filho = pai\
+                                    START WITH obj = TRIM('%s'))\
+                            ORDER BY\
+                                caminho) tst\
+                    INNER JOIN prodctlxe.f9000 f9000 ON TRIM(f9000.tmtasknm) = tst.task\
+                    ORDER BY caminho DESC" % (app)
+    cur.execute(sql_string)
+    rv = cur.fetchall()
+    outputlog(par.replace(' ', ''))
+    outputlog(sql_string)
+    outputlog(datetime.datetime.now())
+    if rv is None:
+        abort(204)
+    cur.close()
+    conn.close()
+    return jsonify(rv)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', '8080'))
