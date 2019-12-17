@@ -108,9 +108,9 @@ def get_cic(tax):
     cur.execute(sql_string)
     rv = cur.fetchall()    
     par = '/cic/' + str(tax)
-    print(loginid,' - ',par.replace(" ", ""))
-    print(loginid,' - '," ".join(sql_string.split()))
-    print(loginid,' - ',datetime.datetime.now())
+    print(loginid,' ',par.replace(" ", ""))
+    print(loginid,' '," ".join(sql_string.split()))
+    print(loginid,' ',datetime.datetime.now())
     if rv is None:
         abort(204)
     cur.close()
@@ -120,7 +120,7 @@ def get_cic(tax):
 @app.route('/oc/<cia>/<int:ordem>/<tipo>', methods=['GET'])
 @auth.login_required
 def get_oc(cia, ordem, tipo):
-    print(loginid,' - ',datetime.datetime.now())
+    print(loginid,' ',datetime.datetime.now())
     conn = createConnection()
     cur = conn.cursor()
     sql_string = '''SELECT\
@@ -141,9 +141,9 @@ def get_oc(cia, ordem, tipo):
     cur.execute(sql_string)
     rv = cur.fetchall()
     par = '/oc/' + cia + '/' + str(ordem) + '/' + tipo
-    print(loginid,' - ',par.replace(" ", ""))
-    print(loginid,' - '," ".join(sql_string.split()))
-    print(loginid,' - ',datetime.datetime.now())
+    print(loginid,' ',par.replace(" ", ""))
+    print(loginid,' '," ".join(sql_string.split()))
+    print(loginid,' ',datetime.datetime.now())
     if rv is None:
         abort(204)
     cur.close()
