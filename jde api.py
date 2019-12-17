@@ -21,7 +21,7 @@ loginid = ''
 @auth.verify_password
 def verify_password(username, password):
     global loginid
-    loginid = username + ' ' + str(datetime.datetime.now())
+    loginid = username + ' ' + str(datetime.datetime.now().timestamp())
     api_url = 'http://api.corp-app-hlg.rbs.com.br/ad/user'
     group_list = ["G-INT-Colaboradores"]
     headers = {'Content-type': 'application/json'}
