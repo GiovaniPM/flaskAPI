@@ -171,8 +171,7 @@ def get_menu(app):
                                 caminho,\
                                 substr(CASE WHEN nivel = 1 THEN caminho ELSE replace(caminho, LAG(caminho) OVER(ORDER BY caminho)) END, 2) task,\
                                 nivel\
-                            FROM\
-                                (   SELECT DISTINCT\
+                            FROM (  SELECT DISTINCT\
                                         sys_connect_by_path(task, '/') caminho,\
                                         level nivel\
                                     FROM (  SELECT\
@@ -191,7 +190,8 @@ def get_menu(app):
                             ORDER BY\
                                 caminho) tst\
                     INNER JOIN prodctlxe.f9000 f9000 ON TRIM(f9000.tmtasknm) = tst.task\
-                    ORDER BY caminho DESC" % (app)
+                    ORDER BY\
+                        caminho DESC" % (app)
     cur.execute(sql_string)
     rv = cur.fetchall()
     outputlog(par.replace(' ', ''))
