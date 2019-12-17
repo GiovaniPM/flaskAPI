@@ -18,7 +18,7 @@ CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
 loginid = ''
 
-def outputlog(text):
+def outputlog(text): # TODO: Modo debug
     text = str(text)
     print(loginid," ".join(text.split()))
 
@@ -112,7 +112,7 @@ def get_cic(tax):
                         ABTAX = '%s' ''' % (tax)
     cur.execute(sql_string)
     rv = cur.fetchall()    
-    outputlog(par.replace(" ", ""))
+    outputlog(par.replace(' ', ''))
     outputlog(sql_string)
     outputlog(datetime.datetime.now())
     if rv is None:
@@ -145,7 +145,7 @@ def get_oc(cia, ordem, tipo):
                         PDDCTO = '%s' ''' % (cia, ordem, tipo)
     cur.execute(sql_string)
     rv = cur.fetchall()
-    outputlog(par.replace(" ", ""))
+    outputlog(par.replace(' ', ''))
     outputlog(sql_string)
     outputlog(datetime.datetime.now())
     if rv is None:
