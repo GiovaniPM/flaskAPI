@@ -85,9 +85,9 @@ def help():
 @app.route('/cic/<tax>', methods=['GET'])
 @auth.login_required
 def get_cic(tax):
+    print(loginid,' - ',datetime.datetime.now())
     conn = createConnection()
     cur = conn.cursor()
-    print(loginid,' - ',datetime.datetime.now())
     sql_string = '''SELECT\
                         ABAN8,\
                         ABAT1,\
@@ -120,9 +120,9 @@ def get_cic(tax):
 @app.route('/oc/<cia>/<int:ordem>/<tipo>', methods=['GET'])
 @auth.login_required
 def get_oc(cia, ordem, tipo):
+    print(loginid,' - ',datetime.datetime.now())
     conn = createConnection()
     cur = conn.cursor()
-    print(loginid,' - ',datetime.datetime.now())
     sql_string = '''SELECT\
                         PDLNID/1000,\
                         TRIM(PDLITM),\
