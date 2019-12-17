@@ -106,9 +106,11 @@ def get_cic(tax):
                     WHERE\
                         ABTAX = '%s' ''' % (tax)
     cur.execute(sql_string)
+    rv = cur.fetchall()    
+    par = '/cic/' + str(tax)
+    print(loginid,' - ',par.replace(" ", ""))
     print(loginid,' - '," ".join(sql_string.split()))
     print(loginid,' - ',datetime.datetime.now())
-    rv = cur.fetchall()    
     if rv is None:
         abort(204)
     cur.close()
@@ -136,10 +138,12 @@ def get_oc(cia, ordem, tipo):
                         PDKCOO = '%s' AND\
                         PDDOCO = %s AND\
                         PDDCTO = '%s' ''' % (cia, ordem, tipo)
-    print(loginid,' - '," ".join(sql_string.split()))
-    print(loginid,' - ',datetime.datetime.now())
     cur.execute(sql_string)
     rv = cur.fetchall()
+    par = '/oc/' + cia + '/' + str(ordem) + '/' + tipo
+    print(loginid,' - ',par.replace(" ", ""))
+    print(loginid,' - '," ".join(sql_string.split()))
+    print(loginid,' - ',datetime.datetime.now())
     if rv is None:
         abort(204)
     cur.close()
