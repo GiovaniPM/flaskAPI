@@ -18,7 +18,7 @@ CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
 loginid = ''
 
-def outputlog(text): # TODO: Modo debug
+def outputlog(text): # TODO: Ativar modo debug
     text = str(text)
     print(loginid," ".join(text.split()))
 
