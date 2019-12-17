@@ -1,7 +1,7 @@
 #Testes
 ## JDE 
 ``` dos
-python "jde api.py"
+python "jdeapi.py"
 
 curl -u giovani_mesquita:5s253m8UV$ -X GET -i http://127.0.0.1:8080/cic/27704912020
 curl -u giovani_mesquita:5s253m8UV$ -X GET -i http://127.0.0.1:8080/cic/62256092020
