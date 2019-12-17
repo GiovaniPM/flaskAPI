@@ -110,7 +110,7 @@ def get_oc(cia, ordem, tipo):
     conn = createConnection()
     cur = conn.cursor()
     sql_string = '''SELECT\
-                        PDLNID,\
+                        PDLNID/1000,\
                         PDLITM,\
                         PDUOM,\
                         PDUORG,\
