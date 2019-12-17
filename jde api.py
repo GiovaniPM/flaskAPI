@@ -10,14 +10,18 @@ from requests import post
 import logging
 import cx_Oracle
 import os
+import datetime
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
 CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
+loginid = ''
 
 @auth.verify_password
 def verify_password(username, password):
+    global loginid
+    loginid = username + ' ' + str(datetime.datetime.now())
     api_url = 'http://api.corp-app-hlg.rbs.com.br/ad/user'
     group_list = ["G-INT-Colaboradores"]
     headers = {'Content-type': 'application/json'}
@@ -83,6 +87,7 @@ def help():
 def get_cic(tax):
     conn = createConnection()
     cur = conn.cursor()
+    print(loginid,' - ',datetime.datetime.now())
     sql_string = '''SELECT\
                         ABAN8,\
                         ABAT1,\
@@ -101,6 +106,8 @@ def get_cic(tax):
                     WHERE\
                         ABTAX = '%s' ''' % (tax)
     cur.execute(sql_string)
+    print(loginid,' - '," ".join(sql_string.split()))
+    print(loginid,' - ',datetime.datetime.now())
     rv = cur.fetchall()    
     if rv is None:
         abort(204)
@@ -113,9 +120,12 @@ def get_cic(tax):
 def get_oc(cia, ordem, tipo):
     conn = createConnection()
     cur = conn.cursor()
+    print(loginid,' - ',datetime.datetime.now())
     sql_string = '''SELECT\
                         PDLNID/1000,\
                         TRIM(PDLITM),\
+                        TRIM(PDDSC1),\
+                        TRIM(PDDSC2),\
                         PDUOM,\
                         PDUORG,\
                         PDAEXP/100,\
@@ -126,6 +136,8 @@ def get_oc(cia, ordem, tipo):
                         PDKCOO = '%s' AND\
                         PDDOCO = %s AND\
                         PDDCTO = '%s' ''' % (cia, ordem, tipo)
+    print(loginid,' - '," ".join(sql_string.split()))
+    print(loginid,' - ',datetime.datetime.now())
     cur.execute(sql_string)
     rv = cur.fetchall()
     if rv is None:
