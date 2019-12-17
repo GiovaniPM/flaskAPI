@@ -184,7 +184,7 @@ def get_menu(app):
                                                 prodctlxe.f9000 f9000\
                                                 INNER JOIN prodctlxe.f9001 f9001 ON f9001.trchildtsk = f9000.tmtaskid\
                                             WHERE\
-                                                f9000.tmtasknm LIKE 'RBS%')\
+                                                f9000.tmtasknm LIKE 'RBS%%')\
                                     CONNECT BY NOCYCLE\
                                         PRIOR filho = pai\
                                     START WITH obj = TRIM('%s'))\
