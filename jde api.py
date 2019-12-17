@@ -18,6 +18,10 @@ CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
 loginid = ''
 
+def outputlog(text):
+    text = str(text)
+    print(loginid," ".join(text.split()))
+
 @auth.verify_password
 def verify_password(username, password):
     global loginid
@@ -85,7 +89,8 @@ def help():
 @app.route('/cic/<tax>', methods=['GET'])
 @auth.login_required
 def get_cic(tax):
-    print(loginid,datetime.datetime.now())
+    par = '/cic/' + str(tax)
+    outputlog(datetime.datetime.now())
     conn = createConnection()
     cur = conn.cursor()
     sql_string = '''SELECT\
@@ -107,10 +112,9 @@ def get_cic(tax):
                         ABTAX = '%s' ''' % (tax)
     cur.execute(sql_string)
     rv = cur.fetchall()    
-    par = '/cic/' + str(tax)
-    print(loginid,par.replace(" ", ""))
-    print(loginid," ".join(sql_string.split()))
-    print(loginid,datetime.datetime.now())
+    outputlog(par.replace(" ", ""))
+    outputlog(sql_string)
+    outputlog(datetime.datetime.now())
     if rv is None:
         abort(204)
     cur.close()
@@ -120,7 +124,8 @@ def get_cic(tax):
 @app.route('/oc/<cia>/<int:ordem>/<tipo>', methods=['GET'])
 @auth.login_required
 def get_oc(cia, ordem, tipo):
-    print(loginid,datetime.datetime.now())
+    par = '/oc/' + cia + '/' + str(ordem) + '/' + tipo
+    outputlog(datetime.datetime.now())
     conn = createConnection()
     cur = conn.cursor()
     sql_string = '''SELECT\
@@ -140,10 +145,9 @@ def get_oc(cia, ordem, tipo):
                         PDDCTO = '%s' ''' % (cia, ordem, tipo)
     cur.execute(sql_string)
     rv = cur.fetchall()
-    par = '/oc/' + cia + '/' + str(ordem) + '/' + tipo
-    print(loginid,par.replace(" ", ""))
-    print(loginid," ".join(sql_string.split()))
-    print(loginid,datetime.datetime.now())
+    outputlog(par.replace(" ", ""))
+    outputlog(sql_string)
+    outputlog(datetime.datetime.now())
     if rv is None:
         abort(204)
     cur.close()
