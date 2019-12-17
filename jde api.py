@@ -115,10 +115,11 @@ def get_oc(cia, ordem, tipo):
     cur = conn.cursor()
     sql_string = '''SELECT\
                         PDLNID/1000,\
-                        PDLITM,\
+                        TRIM(PDLITM),\
                         PDUOM,\
                         PDUORG,\
-                        PDAEXP/100\
+                        PDAEXP/100,\
+                        TRIM(PDANI)\
                     FROM\
                         PRODDTAXE.F4311\
                     WHERE\
