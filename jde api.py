@@ -85,7 +85,7 @@ def help():
 @app.route('/cic/<tax>', methods=['GET'])
 @auth.login_required
 def get_cic(tax):
-    print(loginid,' - ',datetime.datetime.now())
+    print(loginid,' ',datetime.datetime.now())
     conn = createConnection()
     cur = conn.cursor()
     sql_string = '''SELECT\
