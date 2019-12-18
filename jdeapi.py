@@ -93,6 +93,7 @@ def help():
 ██║     ██║██║
 ╚██████╗██║╚██████╗
  ╚═════╝╚═╝ ╚═════╝
+Retorna os endereços de um CIC
 curl -u giovani_mesquita:5s253m8UV$ -X GET -i http://127.0.0.1:8080/cic/82951328000158
 """
 
@@ -138,6 +139,7 @@ def get_cic(tax):
 ██║   ██║██║
 ╚██████╔╝╚██████╗
  ╚═════╝  ╚═════╝
+Retorna linhas de uma OC
 curl -u giovani_mesquita:5s253m8UV$ -X GET -i http://127.0.0.1:8080/oc/00610/2819/OM
 """
 
@@ -181,6 +183,7 @@ def get_oc(cia, ordem, tipo):
 ██║╚██╔╝██║██╔══╝  ██║╚██╗██║██║   ██║
 ██║ ╚═╝ ██║███████╗██║ ╚████║╚██████╔╝
 ╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝
+Retorna o caminho de menu de um app/ube
 curl -u giovani_mesquita:5s253m8UV$ -X GET -i http://127.0.0.1:8080/menu/P4310
 """
 
