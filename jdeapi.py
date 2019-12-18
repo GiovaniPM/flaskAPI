@@ -167,14 +167,14 @@ def get_menu(app):
                         f9000.tmobnm,\
                         f9000.tmver,\
                         f9000.tmfmnm\
-                    FROM (  SELECT\
+                    FROM   (SELECT\
                                 caminho,\
                                 substr(CASE WHEN nivel = 1 THEN caminho ELSE replace(caminho, LAG(caminho) OVER(ORDER BY caminho)) END, 2) task,\
                                 nivel\
-                            FROM (  SELECT DISTINCT\
+                            FROM   (SELECT DISTINCT\
                                         sys_connect_by_path(task, '/') caminho,\
                                         level nivel\
-                                    FROM (  SELECT\
+                                    FROM   (SELECT\
                                                 f9001.trchildtsk pai,\
                                                 f9001.trparnttsk filho,\
                                                 TRIM(f9000.tmtasknm) task,\
