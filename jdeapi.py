@@ -86,6 +86,16 @@ def index():
 def help():
     return 'This is help!'
 
+"""
+ ██████╗██╗ ██████╗
+██╔════╝██║██╔════╝
+██║     ██║██║
+██║     ██║██║
+╚██████╗██║╚██████╗
+ ╚═════╝╚═╝ ╚═════╝
+
+"""
+
 @app.route('/cic/<tax>', methods=['GET'])
 @auth.login_required
 def get_cic(tax):
@@ -121,6 +131,16 @@ def get_cic(tax):
     conn.close()
     return jsonify(rv)
 
+"""
+ ██████╗  ██████╗
+██╔═══██╗██╔════╝
+██║   ██║██║
+██║   ██║██║
+╚██████╔╝╚██████╗
+ ╚═════╝  ╚═════╝
+
+"""
+
 @app.route('/oc/<cia>/<int:ordem>/<tipo>', methods=['GET'])
 @auth.login_required
 def get_oc(cia, ordem, tipo):
@@ -153,6 +173,16 @@ def get_oc(cia, ordem, tipo):
     cur.close()
     conn.close()
     return jsonify(rv)
+
+"""
+███╗   ███╗███████╗███╗   ██╗██╗   ██╗
+████╗ ████║██╔════╝████╗  ██║██║   ██║
+██╔████╔██║█████╗  ██╔██╗ ██║██║   ██║
+██║╚██╔╝██║██╔══╝  ██║╚██╗██║██║   ██║
+██║ ╚═╝ ██║███████╗██║ ╚████║╚██████╔╝
+╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝
+
+"""
 
 @app.route('/menu/<app>', methods=['GET'])
 @auth.login_required
