@@ -216,7 +216,7 @@ def get_menu(app):
                                                 f9000.tmtasknm LIKE 'RBS%%')\
                                     CONNECT BY NOCYCLE\
                                         PRIOR filho = pai\
-                                    START WITH obj = TRIM('%s'))\
+                                    START WITH obj = UPPER(TRIM('%s')))\
                             ORDER BY\
                                 caminho) tst\
                     INNER JOIN prodctlxe.f9000 f9000 ON TRIM(f9000.tmtasknm) = tst.task\
