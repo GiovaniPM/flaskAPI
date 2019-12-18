@@ -93,7 +93,7 @@ def help():
 ██║     ██║██║
 ╚██████╗██║╚██████╗
  ╚═════╝╚═╝ ╚═════╝
-
+curl -u giovani_mesquita:5s253m8UV$ -X GET -i http://127.0.0.1:8080/cic/82951328000158
 """
 
 @app.route('/cic/<tax>', methods=['GET'])
@@ -138,7 +138,7 @@ def get_cic(tax):
 ██║   ██║██║
 ╚██████╔╝╚██████╗
  ╚═════╝  ╚═════╝
-
+curl -u giovani_mesquita:5s253m8UV$ -X GET -i http://127.0.0.1:8080/oc/00610/2819/OM
 """
 
 @app.route('/oc/<cia>/<int:ordem>/<tipo>', methods=['GET'])
@@ -181,7 +181,7 @@ def get_oc(cia, ordem, tipo):
 ██║╚██╔╝██║██╔══╝  ██║╚██╗██║██║   ██║
 ██║ ╚═╝ ██║███████╗██║ ╚████║╚██████╔╝
 ╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝
-
+curl -u giovani_mesquita:5s253m8UV$ -X GET -i http://127.0.0.1:8080/menu/P4310
 """
 
 @app.route('/menu/<app>', methods=['GET'])
