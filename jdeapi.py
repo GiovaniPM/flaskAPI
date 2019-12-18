@@ -103,7 +103,7 @@ def get_cic(tax):
     outputlog(datetime.datetime.now())
     conn = createConnection()
     cur = conn.cursor()
-    sql_string = '''SELECT\
+    sql_string =   "SELECT\
                         ABAN8,\
                         ABAT1,\
                         ABALKY,\
@@ -119,7 +119,7 @@ def get_cic(tax):
                     INNER JOIN PRODDTAXE.F0116\
                         ON ALAN8 = ABAN8\
                     WHERE\
-                        ABTAX = '%s' ''' % (tax)
+                        ABTAX = '%s' " % (tax)
     cur.execute(sql_string)
     rv = cur.fetchall()    
     outputlog(par.replace(' ', ''))
@@ -148,7 +148,7 @@ def get_oc(cia, ordem, tipo):
     outputlog(datetime.datetime.now())
     conn = createConnection()
     cur = conn.cursor()
-    sql_string = '''SELECT\
+    sql_string =   "SELECT\
                         PDLNID/1000,\
                         TRIM(PDLITM),\
                         TRIM(PDDSC1),\
@@ -162,7 +162,7 @@ def get_oc(cia, ordem, tipo):
                     WHERE\
                         PDKCOO = '%s' AND\
                         PDDOCO = %s AND\
-                        PDDCTO = '%s' ''' % (cia, ordem, tipo)
+                        PDDCTO = '%s' " % (cia, ordem, tipo)
     cur.execute(sql_string)
     rv = cur.fetchall()
     outputlog(par.replace(' ', ''))
