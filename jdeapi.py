@@ -120,8 +120,9 @@ def get_cic(tax):
                     INNER JOIN PRODDTAXE.F0116\
                         ON ALAN8 = ABAN8\
                     WHERE\
-                        ABTAX = '%s' " % (tax)
-    cur.execute(sql_string)
+                        ABTAX = rpad(:tax,20,' ')"
+    cur.prepare(sql_string)
+    cur.execute(None, {'tax': tax})
     rv = cur.fetchall()    
     outputlog(par.replace(' ', ''))
     outputlog(sql_string)
@@ -162,10 +163,11 @@ def get_oc(cia, ordem, tipo):
                     FROM\
                         PRODDTAXE.F4311\
                     WHERE\
-                        PDKCOO = '%s' AND\
-                        PDDOCO = %s AND\
-                        PDDCTO = '%s' " % (cia, ordem, tipo)
-    cur.execute(sql_string)
+                        PDKCOO = :cia AND\
+                        PDDOCO = :ordem AND\
+                        PDDCTO = :tipo "
+    cur.prepare(sql_string)
+    cur.execute(None, {'cia': cia, 'ordem': ordem, 'tipo': tipo})
     rv = cur.fetchall()
     outputlog(par.replace(' ', ''))
     outputlog(sql_string)
