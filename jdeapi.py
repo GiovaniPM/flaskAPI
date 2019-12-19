@@ -219,13 +219,14 @@ def get_menu(app):
                                                 f9000.tmtasknm LIKE 'RBS%%')\
                                     CONNECT BY NOCYCLE\
                                         PRIOR filho = pai\
-                                    START WITH obj = UPPER(TRIM('%s')))\
+                                    START WITH obj = UPPER(TRIM(:app)))\
                             ORDER BY\
                                 caminho) tst\
                     INNER JOIN prodctlxe.f9000 f9000 ON TRIM(f9000.tmtasknm) = tst.task\
                     ORDER BY\
-                        caminho DESC" % (app)
-    cur.execute(sql_string)
+                        caminho DESC"
+    cur.prepare(sql_string)
+    cur.execute(None, {'app': app})
     rv = cur.fetchall()
     outputlog(par.replace(' ', ''))
     outputlog(sql_string)
