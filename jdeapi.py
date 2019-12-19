@@ -120,7 +120,7 @@ def get_cic(tax):
                     INNER JOIN PRODDTAXE.F0116\
                         ON ALAN8 = ABAN8\
                     WHERE\
-                        ABTAX = rpad(:tax,20,' ')"
+                        ABTAX = rpad(:tax,20,' ')" # Quando usar bind, deve observar espaços em branco
     cur.prepare(sql_string)
     cur.execute(None, {'tax': tax})
     rv = cur.fetchall()    
