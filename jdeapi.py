@@ -4,13 +4,15 @@ from flask import Flask, jsonify, abort, request
 from flask_cors import CORS, cross_origin
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
-from json import dumps
 from requests import post
+from json import dumps
 
+import collections
 import logging
 import cx_Oracle
 import os
 import datetime
+import json
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
@@ -235,9 +237,19 @@ def get_menu(app):
     outputlog(datetime.datetime.now())
     if rv is None:
         abort(204)
+    objects_list = []
+    for row in rv:
+        reg = {}
+        reg['Task']      = row[0]
+        reg['Descrição'] = row[1]
+        reg['App']       = row[2]
+        reg['Versão']    = row[3]
+        reg['Tela']      = row[4]
+        objects_list.append(reg)
+    json_result = json.dumps(objects_list)
     cur.close()
     conn.close()
-    return jsonify(rv)
+    return jsonify(json_result)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', '8080'))
