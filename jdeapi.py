@@ -237,16 +237,17 @@ def get_menu(app):
     outputlog(datetime.datetime.now())
     if rv is None:
         abort(204)
-    objects_list = []
-    for row in rv:
-        reg = {}
-        reg['Task']      = row[0]
-        reg['Descrição'] = row[1]
-        reg['App']       = row[2]
-        reg['Versão']    = row[3]
-        reg['Tela']      = row[4]
-        objects_list.append(reg)
-    json_result = json.dumps(objects_list)
+    else:
+        objects_list = []
+        for row in rv:
+            reg = {}
+            reg['Task']      = row[0]
+            reg['Descrição'] = row[1]
+            reg['App']       = row[2]
+            reg['Versão']    = row[3]
+            reg['Tela']      = row[4]
+            objects_list.append(reg)
+        json_result = json.dumps(objects_list)
     cur.close()
     conn.close()
     return jsonify(json_result)
