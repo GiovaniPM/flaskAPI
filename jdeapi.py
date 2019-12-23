@@ -236,6 +236,8 @@ def get_menu(app):
     outputlog(sql_string)
     outputlog(datetime.datetime.now())
     if rv is None:
+        cur.close()
+        conn.close()
         abort(204)
     else:
         objects_list = []
@@ -248,8 +250,8 @@ def get_menu(app):
             reg['Tela']      = row[4]
             objects_list.append(reg)
         json_result = json.dumps(objects_list)
-    cur.close()
-    conn.close()
+        cur.close()
+        conn.close()
     return jsonify(json_result)
 
 if __name__ == '__main__':
