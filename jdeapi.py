@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from __future__ import print_function
 from flask import Flask, jsonify, abort, request
 from flask_cors import CORS, cross_origin
@@ -6,6 +7,7 @@ from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 from requests import post
 from json import dumps
+from unicodedata import normalize
 
 import collections
 import logging
@@ -56,6 +58,9 @@ def outputlog(text): # TODO: Ativar modo debug
     text = str(text)
     print(loginid," ".join(text.split()))
 
+def remover_acentos(txt):
+    return normalize('NFKD', txt).encode('ASCII', 'ignore').decode('ASCII')
+
 @auth.verify_password
 def verify_password(username, password):
     global loginid
@@ -86,7 +91,11 @@ def index():
 
 @app.route('/help')
 def help():
-    return 'This is help!'
+    outputhelp = "Services on this server:\n<br/>\
+  cic          usage: curl -u <network user>:<password> -X GET -i http://127.0.0.1:8080/cic/<cic number>\n<br/>\
+  oc           usage: curl -u <network user>:<password> -X GET -i http://127.0.0.1:8080/oc/<cia>/<oc>/<type>\n<br/>\
+  menu         usage: curl -u <network user>:<password> -X GET -i http://127.0.0.1:8080/menu/<app/ube>"
+    return outputhelp
 
 """
  ██████╗██╗ ██████╗
@@ -243,11 +252,11 @@ def get_menu(app):
         objects_list = []
         for row in rv:
             reg = {}
-            reg['Task']      = row[0]
-            reg['Descrição'] = row[1]
-            reg['App']       = row[2]
-            reg['Versão']    = row[3]
-            reg['Tela']      = row[4]
+            reg['Task']      = remover_acentos(row[0])
+            reg['Descricao'] = remover_acentos(row[1])
+            reg['App']       = remover_acentos(row[2])
+            reg['Versao']    = remover_acentos(row[3])
+            reg['Tela']      = remover_acentos(row[4])
             objects_list.append(reg)
         json_result = json.dumps(objects_list)
         cur.close()
