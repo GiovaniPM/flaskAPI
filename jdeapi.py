@@ -89,6 +89,15 @@ def unauthorized():
 def index():
     return 'The application is running!'
 
+"""
+   _   _      _       
+  | | | | ___| |_ __  
+  | |_| |/ _ \ | '_ \ 
+  |  _  |  __/ | |_) |
+  |_| |_|\___|_| .__/ 
+               |_|    
+"""
+
 @app.route('/help')
 def help():
     outputhelp = "Services on this server:\n<br/>\
