@@ -89,15 +89,6 @@ def unauthorized():
 def index():
     return 'The application is running!'
 
-"""
-   _   _      _       
-  | | | | ___| |_ __  
-  | |_| |/ _ \ | '_ \ 
-  |  _  |  __/ | |_) |
-  |_| |_|\___|_| .__/ 
-               |_|    
-"""
-
 @app.route('/help')
 def help():
     outputhelp = "Services on this server:\n<br/>\
@@ -144,7 +135,7 @@ def get_cic(tax):
     cur.prepare(sql_string)
     cur.execute(None, {'tax': tax})
     rv = cur.fetchall()    
-    outputlog(par.replace(' ', ''))
+    outputlog(par.replace(' ', '')) 
     outputlog(sql_string)
     outputlog(datetime.datetime.now())
     if rv is None:
