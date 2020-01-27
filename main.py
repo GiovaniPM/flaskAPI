@@ -69,6 +69,11 @@ api.add_resource(Test, '/api/restful')
 api.add_resource(Quotes, '/api/quotes/<string:quote_type>')
 api.add_resource(Facts, '/api/facts/<string:fact_type>')
 
+#http://127.0.0.1:7210/api/facts/random
+#http://127.0.0.1:7210/api/facts/technology
+#http://127.0.0.1:7210/api/quotes/motivation
+#http://127.0.0.1:7210/api/quotes/funny
+
 def run():
   app.run(host='0.0.0.0',port=7210)
   
