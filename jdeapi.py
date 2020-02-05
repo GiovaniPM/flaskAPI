@@ -92,9 +92,9 @@ def index():
 @app.route('/help')
 def help():
     outputhelp = "Services on this server:\n<br/>\
-  cic          usage: curl -u <network user>:<password> -X GET -i http://127.0.0.1:8080/cic/<cic number>\n<br/>\
-  oc           usage: curl -u <network user>:<password> -X GET -i http://127.0.0.1:8080/oc/<cia>/<oc>/<type>\n<br/>\
-  menu         usage: curl -u <network user>:<password> -X GET -i http://127.0.0.1:8080/menu/<app/ube>"
+  cic          usage: curl -u <network user>:<password> -X GET -i http://127.0.0.1:8080/cic/cic number\n<br/>\
+  oc           usage: curl -u <network user>:<password> -X GET -i http://127.0.0.1:8080/oc/cia/oc/type\n<br/>\
+  menu         usage: curl -u <network user>:<password> -X GET -i http://127.0.0.1:8080/menu/appube"
     return outputhelp
 
 """
@@ -139,10 +139,28 @@ def get_cic(tax):
     outputlog(sql_string)
     outputlog(datetime.datetime.now())
     if rv is None:
+        cur.close()
+        conn.close()
         abort(204)
-    cur.close()
-    conn.close()
-    return jsonify(rv)
+    else:
+        objects_list = []
+        for row in rv:
+            reg = {}
+            reg['Codigo']      = row[0]
+            reg['Tipo']        = remover_acentos(row[1])
+            reg['Alternativo'] = remover_acentos(row[2])
+            reg['Nome']        = remover_acentos(row[3])
+            reg['Endereco1']   = remover_acentos(row[4])
+            reg['Endereco2']   = remover_acentos(row[5])
+            reg['CEP']         = remover_acentos(row[6])
+            reg['Cidade']      = remover_acentos(row[7])
+            reg['Estado']      = remover_acentos(row[8])
+            reg['Pais']        = remover_acentos(row[9])
+            objects_list.append(reg)
+        json_result = json.dumps(objects_list)
+        cur.close()
+        conn.close()
+    return jsonify(json_result)
 
 """
  ██████╗  ██████╗
@@ -184,10 +202,26 @@ def get_oc(cia, ordem, tipo):
     outputlog(sql_string)
     outputlog(datetime.datetime.now())
     if rv is None:
+        cur.close()
+        conn.close()
         abort(204)
-    cur.close()
-    conn.close()
-    return jsonify(rv)
+    else:
+        objects_list = []
+        for row in rv:
+            reg = {}
+            reg['Linha']      = row[0]
+            reg['Item']       = remover_acentos(row[1])
+            reg['Descricao1'] = remover_acentos(row[2])
+            reg['Descricao2'] = remover_acentos(row[3])
+            reg['UM']         = remover_acentos(row[4])
+            reg['Quantidade'] = row[5]
+            reg['Valor']      = row[6]
+            reg['Conta']      = remover_acentos(row[7])
+            objects_list.append(reg)
+        json_result = json.dumps(objects_list)
+        cur.close()
+        conn.close()
+    return jsonify(json_result)
 
 """
 ███╗   ███╗███████╗███╗   ██╗██╗   ██╗
