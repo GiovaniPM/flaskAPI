@@ -146,16 +146,16 @@ def get_cic(tax):
         objects_list = []
         for row in rv:
             reg = {}
-            reg['Codigo']      = row[0]
-            reg['Tipo']        = remover_acentos(row[1])
+            reg['Codigo'     ] =                 row[0]
+            reg['Tipo'       ] = remover_acentos(row[1])
             reg['Alternativo'] = remover_acentos(row[2])
-            reg['Nome']        = remover_acentos(row[3])
-            reg['Endereco1']   = remover_acentos(row[4])
-            reg['Endereco2']   = remover_acentos(row[5])
-            reg['CEP']         = remover_acentos(row[6])
-            reg['Cidade']      = remover_acentos(row[7])
-            reg['Estado']      = remover_acentos(row[8])
-            reg['Pais']        = remover_acentos(row[9])
+            reg['Nome'       ] = remover_acentos(row[3])
+            reg['Endereco1'  ] = remover_acentos(row[4])
+            reg['Endereco2'  ] = remover_acentos(row[5])
+            reg['CEP'        ] = remover_acentos(row[6])
+            reg['Cidade'     ] = remover_acentos(row[7])
+            reg['Estado'     ] = remover_acentos(row[8])
+            reg['Pais'       ] = remover_acentos(row[9])
             objects_list.append(reg)
         json_result = json.dumps(objects_list)
         cur.close()
@@ -209,14 +209,14 @@ def get_oc(cia, ordem, tipo):
         objects_list = []
         for row in rv:
             reg = {}
-            reg['Linha']      = row[0]
-            reg['Item']       = remover_acentos(row[1])
+            reg['Linha'     ] =                 row[0]
+            reg['Item'      ] = remover_acentos(row[1])
             reg['Descricao1'] = remover_acentos(row[2])
             reg['Descricao2'] = remover_acentos(row[3])
-            reg['UM']         = remover_acentos(row[4])
-            reg['Quantidade'] = row[5]
-            reg['Valor']      = row[6]
-            reg['Conta']      = remover_acentos(row[7])
+            reg['UM'        ] = remover_acentos(row[4])
+            reg['Quantidade'] =                 row[5]
+            reg['Valor'     ] =                 row[6]
+            reg['Conta'     ] = remover_acentos(row[7])
             objects_list.append(reg)
         json_result = json.dumps(objects_list)
         cur.close()
@@ -286,11 +286,11 @@ def get_menu(app):
         objects_list = []
         for row in rv:
             reg = {}
-            reg['Task']      = remover_acentos(row[0])
+            reg['Task'     ] = remover_acentos(row[0])
             reg['Descricao'] = remover_acentos(row[1])
-            reg['App']       = remover_acentos(row[2])
-            reg['Versao']    = remover_acentos(row[3])
-            reg['Tela']      = remover_acentos(row[4])
+            reg['App'      ] = remover_acentos(row[2])
+            reg['Versao'   ] = remover_acentos(row[3])
+            reg['Tela'     ] = remover_acentos(row[4])
             objects_list.append(reg)
         json_result = json.dumps(objects_list)
         cur.close()
