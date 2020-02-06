@@ -39,7 +39,7 @@ def creatConnection():
  						   passwd=os.environ.get('MYSQLCS_USER_PASSWORD', ''), 
  						   db=database,
  						   cursorclass=pymysql.cursors.DictCursor)
-    return conn;
+    return conn
 
 @app.route('/')
 def index():
