@@ -13,7 +13,7 @@ app = Flask(__name__)
 CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
 
-#curl -X GET -i -H "Content-Type: application/json" -d "{\"id\":1,\"nome\":\"Giovani\"}" http://127.0.0.1:8080/employees
+#curl -X GET -i -H "Content-Type: application/json" -d "{\"id\":32,\"nome\":\"Lucas\",\"ano\":2020}" http://127.0.0.1:8080/employees
 @app.route('/employees', methods=['GET'])
 def view_employee():
     objects_list = []
