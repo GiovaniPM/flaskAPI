@@ -25,6 +25,10 @@ def view_employee():
         reg['01' ] = request.json['id']
         reg['02' ] = request.json['nome']
         reg['03' ] = str(datetime.datetime.now())
+        if request.json['ano'] == 2020:
+            reg['04' ] = 'Este ano'
+        else:
+            reg['04' ] = 'Outro ano'
         objects_list.append(reg)
         json_result = json.dumps(objects_list)
         return jsonify(json_result)
