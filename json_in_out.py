@@ -7,6 +7,7 @@ from requests import post
 
 import logging
 import os
+import datetime
 import json
 
 app = Flask(__name__)
@@ -23,6 +24,7 @@ def view_employee():
         reg        = {}
         reg['01' ] = request.json['id']
         reg['02' ] = request.json['nome']
+        reg['03' ] = str(datetime.datetime.now())
         objects_list.append(reg)
         json_result = json.dumps(objects_list)
         return jsonify(json_result)
