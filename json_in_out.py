@@ -15,6 +15,15 @@ app = Flask(__name__)
 CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
 
+#Transformando um string em JSON
+#import json 
+#str = '{"from": {"id": "8", "name": "Mary Pinter"}, "message": "How ARE you?", "comments": {"count": 0}, "updated_time": "2012-05-01", "created_time": "2012-05-01", "to": {"data": [{"id": "1543", "name": "Honey Pinter"}]}, "type": "status", "id": "id_7"}'
+#data = json.loads(str)
+#post_id = data['id']
+#post_type = data['type']
+#print(post_id)
+#print(post_type)
+
 def isCpfValid(cpf):
     """ If cpf in the Brazilian format is valid, it returns True, otherwise, it returns False. """
     # Check if type is str
