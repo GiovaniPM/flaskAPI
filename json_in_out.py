@@ -120,6 +120,12 @@ def view_employee():
 #curl -X GET -i -H "Content-Type: application/json" -d "{\"cic\":\"30917504000131\"}" http://127.0.0.1:8080/cic
 @app.route('/cic', methods=['GET'])
 def view_cic():
+    """ Service to validate CIC (CPF/CNPJ).
+
+    Parameter: cic:string
+    Return: True/False
+
+    """
     objects_list = []
     if request.json == None:
         abort(404)
