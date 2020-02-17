@@ -252,6 +252,13 @@ def view_dv():
               "processo":string}
     Return:
         True/False per each parameter passed named
+        JSON {"certidao":True/False,
+              "cnpj":True/False,
+              "cpf":True/False
+              "credito":True/False
+              "ect":True/False
+              "nfe":True/False
+              "processo":True/False}
     Usage:
         curl -X GET -i -H "Content-Type: application/json" -d "{\"certidao\":\"10453901552013100012021000012321\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"cnpj\":\"30917504000131\"}" http://127.0.0.1:8080/dv
@@ -262,6 +269,19 @@ def view_dv():
         curl -X GET -i -H "Content-Type: application/json" -d "{\"processo\":\"00020802520125150049\"}" http://127.0.0.1:8080/dv
 
         curl -X GET -i -H "Content-Type: application/json" -d "{\"certidao\":\"10453901552013100012021000012321\",\"cnpj\":\"30917504000131\", \"cpf\":\"62256092020\",\"credito\":\"5491670040304243\",\"ect\":\"473124829\",\"nfe\":\"43171207364617000135550000000120141000120146\",\"processo\":\"00020802520125150049\"}" http://127.0.0.1:8080/dv
+    Exemplo:
+        $ curl -X GET -i -H "Content-Type: application/json" -d "{\"certidao\":\"10453901552013100012021000012321\",\"cnpj\":\"30917504000131\", \"cpf\":\"62256092020\",\"credito\":\"5491670040304243\",\"ect\":\"473124829\",\"nfe\":\"43171207364617000135550000000120141000120146\",\"processo\":\"00020802520125150049\"}" http://127.0.0.1:8080/dv
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100   349  100   123  100   226  61500   110k --:--:-- --:--:-- --:--:--  340k
+        HTTP/1.0 200 OK
+        Content-Type: application/json
+        Content-Length: 123
+        Access-Control-Allow-Origin: *
+        Server: Werkzeug/0.16.0 Python/3.8.1
+        Date: Mon, 17 Feb 2020 18:48:18 GMT
+        
+        "{\"certidao\": true, \"cnpj\": true, \"cpf\": true, \"credito\": true, \"ect\": true, \"nfe\": true, \"processo\": true}"
     """
     # TODO: Make the validation routine
     # TODO: Make the accounting routine
