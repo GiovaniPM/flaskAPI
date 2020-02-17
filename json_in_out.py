@@ -118,10 +118,11 @@ def view_employee():
 
 @app.route('/dv', methods=['GET'])
 def view_cic():
-    """ Service to validate CIC (CPF/CNPJ).
+    """
+    Service to validate Digit Verification.
 
-    Parameter: cic:string
-    Return: True/False
+    Parameter: JSON {cnpj:string, cpf:string}
+    Return: True/False per each parameter
 
     Uso:
         curl -X GET -i -H "Content-Type: application/json" -d "{\"cpf\":\"62256092020\"}" http://127.0.0.1:8080/dv
