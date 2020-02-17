@@ -116,8 +116,6 @@ def view_employee():
         json_result = json.dumps(objects_list)
         return jsonify(json_result)
 
-#curl -X GET -i -H "Content-Type: application/json" -d "{\"cic\":\"62256092020\"}" http://127.0.0.1:8080/dv
-#curl -X GET -i -H "Content-Type: application/json" -d "{\"cic\":\"30917504000131\"}" http://127.0.0.1:8080/dv
 @app.route('/dv', methods=['GET'])
 def view_cic():
     """ Service to validate CIC (CPF/CNPJ).
@@ -125,29 +123,35 @@ def view_cic():
     Parameter: cic:string
     Return: True/False
 
+    Uso:
+        curl -X GET -i -H "Content-Type: application/json" -d "{\"cpf\":\"62256092020\"}" http://127.0.0.1:8080/dv
+        curl -X GET -i -H "Content-Type: application/json" -d "{\"cnpj\":\"30917504000131\"}" http://127.0.0.1:8080/dv
+        curl -X GET -i -H "Content-Type: application/json" -d "{\"cnpj\":\"30917504000131\", \"cpf\":\"62256092020\"}" http://127.0.0.1:8080/dv
     """
     objects_list = []
+    reg          = {}
     if request.json == None:
         abort(404)
-    elif 'cic' in request.json:
-        if not isinstance(request.json['cic'],str):
+    if 'cnpj' in request.json:
+        if not isinstance(request.json['cnpj'],str):
             abort(415)
-        elif len(request.json['cic']) == 11:
-            reg            = {}
-            reg['result' ] = isCpfValid(request.json['cic'])
-            objects_list.append(reg)
-            json_result = json.dumps(objects_list)
-            return jsonify(json_result)
-        elif len(request.json['cic']) == 14:
-            reg            = {}
-            reg['result' ] = isCnpjValid(request.json['cic'])
-            objects_list.append(reg)
-            json_result = json.dumps(objects_list)
-            return jsonify(json_result)
+        elif len(request.json['cnpj']) == 14:
+            reg['cnpj' ] = isCnpjValid(request.json['cnpj'])
         else:
             abort(406)
-    else:
-        abort(405)
+    if 'cpf' in request.json:
+        if not isinstance(request.json['cpf'],str):
+            abort(415)
+        elif len(request.json['cpf']) == 11:
+            reg['cpf' ] = isCpfValid(request.json['cpf'])
+        else:
+            abort(406)
+    #objects_list.append(reg)
+    #json_result = json.dumps(objects_list)
+    json_result = json.dumps(reg)
+    return jsonify(json_result)
+    #else:
+    #    abort(405)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', '8080'))
