@@ -116,9 +116,9 @@ def view_employee():
         json_result = json.dumps(objects_list)
         return jsonify(json_result)
 
-#curl -X GET -i -H "Content-Type: application/json" -d "{\"cic\":\"62256092020\"}" http://127.0.0.1:8080/cic
-#curl -X GET -i -H "Content-Type: application/json" -d "{\"cic\":\"30917504000131\"}" http://127.0.0.1:8080/cic
-@app.route('/cic', methods=['GET'])
+#curl -X GET -i -H "Content-Type: application/json" -d "{\"cic\":\"62256092020\"}" http://127.0.0.1:8080/dv
+#curl -X GET -i -H "Content-Type: application/json" -d "{\"cic\":\"30917504000131\"}" http://127.0.0.1:8080/dv
+@app.route('/dv', methods=['GET'])
 def view_cic():
     """ Service to validate CIC (CPF/CNPJ).
 
@@ -129,22 +129,23 @@ def view_cic():
     objects_list = []
     if request.json == None:
         abort(404)
-    elif 'cic' not in request.json:
-        abort(404)
-    elif not isinstance(request.json['cic'],str):
-        abort(404)
-    elif len(request.json['cic']) == 11:
-        reg            = {}
-        reg['result' ] = isCpfValid(request.json['cic'])
-        objects_list.append(reg)
-        json_result = json.dumps(objects_list)
-        return jsonify(json_result)
-    elif len(request.json['cic']) == 14:
-        reg            = {}
-        reg['result' ] = isCnpjValid(request.json['cic'])
-        objects_list.append(reg)
-        json_result = json.dumps(objects_list)
-        return jsonify(json_result)
+    elif 'cic' in request.json:
+        if not isinstance(request.json['cic'],str):
+            abort(404)
+        elif len(request.json['cic']) == 11:
+            reg            = {}
+            reg['result' ] = isCpfValid(request.json['cic'])
+            objects_list.append(reg)
+            json_result = json.dumps(objects_list)
+            return jsonify(json_result)
+        elif len(request.json['cic']) == 14:
+            reg            = {}
+            reg['result' ] = isCnpjValid(request.json['cic'])
+            objects_list.append(reg)
+            json_result = json.dumps(objects_list)
+            return jsonify(json_result)
+        else:
+            abort(404)
     else:
         abort(404)
 
