@@ -243,9 +243,15 @@ def view_dv():
     Description:
         Service to validate Digit Verification.
     Parameter:
-        JSON {cnpj:string, cpf:string}
+        JSON {"certidao":string,
+              "cnpj":string,
+              "cpf":string
+              "credito":string
+              "ect":string
+              "nfe":string
+              "processo":string}
     Return:
-        True/False per each parameter passed
+        True/False per each parameter passed named
     Usage:
         curl -X GET -i -H "Content-Type: application/json" -d "{\"certidao\":\"10453901552013100012021000012321\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"cnpj\":\"30917504000131\"}" http://127.0.0.1:8080/dv
