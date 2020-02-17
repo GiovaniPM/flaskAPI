@@ -131,7 +131,7 @@ def view_cic():
         abort(404)
     elif 'cic' in request.json:
         if not isinstance(request.json['cic'],str):
-            abort(404)
+            abort(415)
         elif len(request.json['cic']) == 11:
             reg            = {}
             reg['result' ] = isCpfValid(request.json['cic'])
@@ -145,9 +145,9 @@ def view_cic():
             json_result = json.dumps(objects_list)
             return jsonify(json_result)
         else:
-            abort(404)
+            abort(406)
     else:
-        abort(404)
+        abort(405)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', '8080'))
