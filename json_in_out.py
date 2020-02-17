@@ -128,7 +128,6 @@ def view_cic():
         curl -X GET -i -H "Content-Type: application/json" -d "{\"cnpj\":\"30917504000131\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"cnpj\":\"30917504000131\", \"cpf\":\"62256092020\"}" http://127.0.0.1:8080/dv
     """
-    objects_list = []
     reg          = {}
     if request.json == None:
         abort(404)
@@ -146,12 +145,8 @@ def view_cic():
             reg['cpf' ] = isCpfValid(request.json['cpf'])
         else:
             abort(406)
-    #objects_list.append(reg)
-    #json_result = json.dumps(objects_list)
     json_result = json.dumps(reg)
     return jsonify(json_result)
-    #else:
-    #    abort(405)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', '8080'))
