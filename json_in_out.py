@@ -269,7 +269,7 @@ def view_dv():
         curl -X GET -i -H "Content-Type: application/json" -d "{\"processo\":\"00020802520125150049\"}" http://127.0.0.1:8080/dv
 
         curl -X GET -i -H "Content-Type: application/json" -d "{\"certidao\":\"10453901552013100012021000012321\",\"cnpj\":\"30917504000131\", \"cpf\":\"62256092020\",\"credito\":\"5491670040304243\",\"ect\":\"473124829\",\"nfe\":\"43171207364617000135550000000120141000120146\",\"processo\":\"00020802520125150049\"}" http://127.0.0.1:8080/dv
-    Exemplo:
+    Example:
         $ curl -X GET -i -H "Content-Type: application/json" -d "{\"certidao\":\"10453901552013100012021000012321\",\"cnpj\":\"30917504000131\", \"cpf\":\"62256092020\",\"credito\":\"5491670040304243\",\"ect\":\"473124829\",\"nfe\":\"43171207364617000135550000000120141000120146\",\"processo\":\"00020802520125150049\"}" http://127.0.0.1:8080/dv
           % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                          Dload  Upload   Total   Spent    Left  Speed
