@@ -132,22 +132,25 @@ def view_cic():
     reg          = {}
     if request.json == None:
         abort(404)
-    if 'cnpj' in request.json:
-        if not isinstance(request.json['cnpj'],str):
-            abort(415)
-        elif len(request.json['cnpj']) == 14:
-            reg['cnpj' ] = isCnpjValid(request.json['cnpj'])
-        else:
-            abort(406)
-    if 'cpf' in request.json:
-        if not isinstance(request.json['cpf'],str):
-            abort(415)
-        elif len(request.json['cpf']) == 11:
-            reg['cpf' ] = isCpfValid(request.json['cpf'])
-        else:
-            abort(406)
-    json_result = json.dumps(reg)
-    return jsonify(json_result)
+    elif 'cnpj' in request.json or 'cpf' in request.json:
+        if 'cnpj' in request.json:
+            if not isinstance(request.json['cnpj'],str):
+                abort(415)
+            elif len(request.json['cnpj']) == 14:
+                reg['cnpj' ] = isCnpjValid(request.json['cnpj'])
+            else:
+                abort(406)
+        if 'cpf' in request.json:
+            if not isinstance(request.json['cpf'],str):
+                abort(415)
+            elif len(request.json['cpf']) == 11:
+                reg['cpf' ] = isCpfValid(request.json['cpf'])
+            else:
+                abort(406)
+        json_result = json.dumps(reg)
+        return jsonify(json_result)
+    else:
+        abort(405)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', '8080'))
