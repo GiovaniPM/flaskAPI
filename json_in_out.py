@@ -62,6 +62,32 @@ def isCpfValid(cpf):
         return True
     return False
 
+def isEctValid(ect):
+    """ If ect in the Brazilian format is valid, it returns True, otherwise, it returns False. """
+    # Check if type is str
+    if not isinstance(ect,str):
+        return False
+    # Remove some unwanted characters
+    ect = re.sub("[^0-9]",'',ect)
+    # Checks if string has 9 characters
+    if len(ect) != 9:
+        return False
+    sum = 0
+    weight = [8,6,4,2,3,5,9,7]
+    """ Calculating the ect check digit. """
+    for n in range(8):
+        sum = sum + int(ect[n]) * weight[n]
+    verifyingDigit = 11 -  sum % 11
+    if verifyingDigit == 0:
+        firstVerifyingDigit = 5
+    elif verifyingDigit == 1:
+        firstVerifyingDigit = 0
+    else:
+        firstVerifyingDigit = verifyingDigit
+    if ect[-1:] == "%s" % (firstVerifyingDigit):
+        return True
+    return False
+
 def isCnpjValid(cnpj):
     """ If cnpf in the Brazilian format is valid, it returns True, otherwise, it returns False. """
     # Check if type is str
@@ -119,20 +145,31 @@ def view_employee():
 @app.route('/dv', methods=['GET'])
 def view_cic():
     """
-    Service to validate Digit Verification.
-
-    Parameter: JSON {cnpj:string, cpf:string}
-    Return: True/False per each parameter
-
-    Uso:
+    Description:
+        Service to validate Digit Verification.
+    Parameter:
+        JSON {cnpj:string, cpf:string}
+    Return:
+        True/False per each parameter passed
+    Usage:
+        curl -X GET -i -H "Content-Type: application/json" -d "{\"ect\":\"473124829\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"cpf\":\"62256092020\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"cnpj\":\"30917504000131\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"cnpj\":\"30917504000131\", \"cpf\":\"62256092020\"}" http://127.0.0.1:8080/dv
     """
+    # TODO: Make the validation routine
+    # TODO: Make the accounting routine
     reg          = {}
     if request.json == None:
         abort(404)
-    elif 'cnpj' in request.json or 'cpf' in request.json:
+    elif 'ect' in request.json or 'cnpj' in request.json or 'cpf' in request.json:
+        if 'ect' in request.json:
+            if not isinstance(request.json['ect'],str):
+                abort(415)
+            elif len(request.json['ect']) == 9:
+                reg['ect' ] = isEctValid(request.json['ect'])
+            else:
+                abort(406)
         if 'cnpj' in request.json:
             if not isinstance(request.json['cnpj'],str):
                 abort(415)
