@@ -234,7 +234,7 @@ def view_dv():
     Usage:
         curl -X GET -i -H "Content-Type: application/json" -d "{\"certidao\":\"10453901552013100012021000012321\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"cnpj\":\"30917504000131\"}" http://127.0.0.1:8080/dv
-        curl -X GET -i -H "Content-Type: application/json" -d "{\"cpf\":\"62256092020\"}" http://127.0.0.1:8080/dv
+        curl -X GET -i -H "Content-Type: application/json" -d "{\"cpf\":\"622.560.920-20\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"credito\":\"5491670040304243\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"ect\":\"473124829\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"nfe\":\"43171207364617000135550000000120141000120146\"}" http://127.0.0.1:8080/dv
