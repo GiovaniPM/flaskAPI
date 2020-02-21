@@ -209,6 +209,37 @@ def isNfeValid(nfe):
         return True
     return False
 
+def isTituloValid(titulo):
+    """ If titulo in the Brazilian format is valid, it returns True, otherwise, it returns False. """
+    # Check if type is str
+    if not isinstance(titulo,str):
+        return False
+    # Remove some unwanted characters
+    titulo = re.sub("[^0-9]",'',titulo)
+    # Checks if string has 11 characters
+    if len(titulo) != 12:
+        return False
+    sum = 0
+    weight = [2,3,4,5,6,7,8,9]
+    """ Calculating the first titulo check digit. """
+    for n in range(8):
+        sum = sum + int(titulo[n]) * weight[n]
+    verifyingDigit = sum % 11
+    if verifyingDigit > 10 :
+        firstVerifyingDigit = 0
+    else:
+        firstVerifyingDigit = verifyingDigit
+    """ Calculating the second check digit of titulo. """
+    sum = (int(titulo[8]) * 7) + (int(titulo[9]) * 8) + (firstVerifyingDigit * 9)
+    verifyingDigit = sum % 11
+    if verifyingDigit > 10 :
+        secondVerifyingDigit = 0
+    else:
+        secondVerifyingDigit = verifyingDigit
+    if titulo[-2:] == "%s%s" % (firstVerifyingDigit,secondVerifyingDigit):
+        return True
+    return False
+
 @app.route('/dv', methods=['GET'])
 def view_dv():
     """
@@ -239,6 +270,7 @@ def view_dv():
         curl -X GET -i -H "Content-Type: application/json" -d "{\"ect\":\"473124829\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"nfe\":\"43171207364617000135550000000120141000120146\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"processo\":\"00020802520125150049\"}" http://127.0.0.1:8080/dv
+        curl -X GET -i -H "Content-Type: application/json" -d "{\"titulo\":\"053538810418\"}" http://127.0.0.1:8080/dv
 
         curl -X GET -i -H "Content-Type: application/json" -d "{\"certidao\":\"10453901552013100012021000012321\",\"cnpj\":\"30917504000131\", \"cpf\":\"62256092020\",\"credito\":\"5491670040304243\",\"ect\":\"473124829\",\"nfe\":\"43171207364617000135550000000120141000120146\",\"processo\":\"00020802520125150049\"}" http://127.0.0.1:8080/dv
     Example:
@@ -260,7 +292,7 @@ def view_dv():
     reg          = {}
     if request.json == None:
         abort(404)
-    elif 'nfe' in request.json or 'credito' in request.json or 'processo' in request.json or 'certidao' in request.json or 'ect' in request.json or 'cnpj' in request.json or 'cpf' in request.json:
+    elif 'titulo' in request.json or 'nfe' in request.json or 'credito' in request.json or 'processo' in request.json or 'certidao' in request.json or 'ect' in request.json or 'cnpj' in request.json or 'cpf' in request.json:
         if 'certidao' in request.json:
             if not isinstance(request.json['certidao'],str):
                 abort(415)
@@ -308,6 +340,13 @@ def view_dv():
                 abort(415)
             elif len(request.json['processo']) == 20:
                 reg['processo' ] = isProcessoValid(request.json['processo'])
+            else:
+                abort(406)
+        if 'titulo' in request.json:
+            if not isinstance(request.json['titulo'],str):
+                abort(415)
+            elif len(request.json['titulo']) == 12:
+                reg['titulo' ] = isTituloValid(request.json['titulo'])
             else:
                 abort(406)
         json_result = json.dumps(reg)
