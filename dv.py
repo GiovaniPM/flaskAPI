@@ -216,6 +216,7 @@ def isTituloValid(titulo):
         return False
     # Remove some unwanted characters
     titulo = re.sub("[^0-9]",'',titulo)
+    state = titulo[8:2]
     # Checks if string has 11 characters
     if len(titulo) != 12:
         return False
@@ -226,16 +227,18 @@ def isTituloValid(titulo):
         sum = sum + int(titulo[n]) * weight[n]
     verifyingDigit = sum % 11
     if verifyingDigit > 10 :
-        firstVerifyingDigit = 0
-    else:
-        firstVerifyingDigit = verifyingDigit
+        verifyingDigit = 0
+    if state == '01' or state == '02' and verifyingDigit == 0:
+        verifyingDigit = 1
+    firstVerifyingDigit = verifyingDigit
     """ Calculating the second check digit of titulo. """
     sum = (int(titulo[8]) * 7) + (int(titulo[9]) * 8) + (firstVerifyingDigit * 9)
     verifyingDigit = sum % 11
     if verifyingDigit > 10 :
-        secondVerifyingDigit = 0
-    else:
-        secondVerifyingDigit = verifyingDigit
+        verifyingDigit = 0
+    if state == '01' or state == '02' and verifyingDigit == 0:
+        verifyingDigit = 1
+    secondVerifyingDigit = verifyingDigit
     if titulo[-2:] == "%s%s" % (firstVerifyingDigit,secondVerifyingDigit):
         return True
     return False
@@ -248,20 +251,22 @@ def view_dv():
     Parameter:
         JSON {"certidao":string,
               "cnpj":string,
-              "cpf":string
-              "credito":string
-              "ect":string
-              "nfe":string
-              "processo":string}
+              "cpf":string,
+              "credito":string,
+              "ect":string,
+              "nfe":string,
+              "processo":string,
+              "titulo":string}
     Return:
         True/False per each parameter passed named
         JSON {"certidao":True/False,
               "cnpj":True/False,
-              "cpf":True/False
-              "credito":True/False
-              "ect":True/False
-              "nfe":True/False
-              "processo":True/False}
+              "cpf":True/False,
+              "credito":True/False,
+              "ect":True/False,
+              "nfe":True/False,
+              "processo":True/False,
+              "titulo":True/False}
     Usage:
         curl -X GET -i -H "Content-Type: application/json" -d "{\"certidao\":\"10453901552013100012021000012321\"}" http://127.0.0.1:8080/dv
         curl -X GET -i -H "Content-Type: application/json" -d "{\"cnpj\":\"30917504000131\"}" http://127.0.0.1:8080/dv
