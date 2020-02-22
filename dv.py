@@ -62,7 +62,7 @@ def isEctValid(ect):
     """
         If ect in the Brazilian format is valid, it returns True, otherwise, it returns False.
 
-        Format: AA99999999DAA TODO: Remover os caracteres
+        Format: AA99999999DAA
     """
     # Check if type is str
     if not isinstance(ect,str):
@@ -302,7 +302,7 @@ def isTituloValid(titulo):
         9999 9999 - Código
 
         UU - Unidade da federacao
-        
+
         DD - Digito Verificador
     """
     # Check if type is str
@@ -424,7 +424,7 @@ def view_dv():
         if 'ect' in request.json:
             if not isinstance(request.json['ect'],str):
                 abort(415)
-            elif len(request.json['ect']) == 9:
+            elif len(request.json['ect']) == 9 or len(request.json['ect']) == 13:
                 reg['ect' ] = isEctValid(request.json['ect'])
             else:
                 abort(406)
