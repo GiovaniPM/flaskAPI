@@ -17,7 +17,11 @@ CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
 
 def isCpfValid(cpf):
-    """ If cpf in the Brazilian format is valid, it returns True, otherwise, it returns False. """
+    """
+        If cpf in the Brazilian format is valid, it returns True, otherwise, it returns False. 
+
+        Format: 999.999.999-DD
+    """
     # Check if type is str
     if not isinstance(cpf,str):
         return False
@@ -55,7 +59,11 @@ def isCpfValid(cpf):
     return False
 
 def isEctValid(ect):
-    """ If ect in the Brazilian format is valid, it returns True, otherwise, it returns False. """
+    """
+        If ect in the Brazilian format is valid, it returns True, otherwise, it returns False.
+
+        Format: AA99999999DAA TODO: Remover os caracteres
+    """
     # Check if type is str
     if not isinstance(ect,str):
         return False
@@ -81,7 +89,11 @@ def isEctValid(ect):
     return False
 
 def isCnpjValid(cnpj):
-    """ If cnpf in the Brazilian format is valid, it returns True, otherwise, it returns False. """
+    """
+        If cnpf in the Brazilian format is valid, it returns True, otherwise, it returns False.
+
+        Format: 99.999.999/999-DD
+    """
     # Check if type is str
     if not isinstance(cnpj,str):
         return False
@@ -116,7 +128,31 @@ def isCnpjValid(cnpj):
     return False
 
 def isCertidaoValid(certidao):
-    """ If certidao in the Brazilian format is valid, it returns True, otherwise, it returns False. """
+    """
+        If certidao in the Brazilian format is valid, it returns True, otherwise, it returns False.
+
+        Format: aaaaaa.bb.cc.dddd.e.fffff.ggg.hhhhhhh-ii
+
+        Onde:
+
+        aaaaaa - indica o Código Nacional da Serventia (identificação única do cartório) ex.: 10453-9 (v. Nota final)
+
+        bb - indica o Código do Acervo (01-Acervo Próprio e 02-Acervos incorporados)
+
+        cc - indica o Tipo de Serviço Prestado (55 - Serviço de Registro Civil das Pessoas Naturais)
+
+        dddd - indica o Ano do Registro - ex.: 2013
+
+        e - indica o Tipo do livro - 1-Livro A (Nascimento), 2-Livro B (Casamento), 3-Livro B Auxiliar (Registro de casamentos religiosos para fins civis), 4-Livro C (Óbito), 5-Livro C Auxiliar (Registro de Natimortos), 6-Livro D (Registro de Proclamas), 7-Livro E (Demais atos relativos ao Registro Civil ou Livro E único), 8-Livro E (Desdobrado para registro específico das Emancipações) e 9-Livro E (Desdobrado para registro específico das Interdições)
+
+        fffff - indica o Número do livro - ex.: 00012
+
+        ggg - indica o Número da folha - ex.: 021
+
+        hhhhhhh - indica o Número do Termo - ex.: 0000123
+
+        ii - indica o Dígito Verificador DV
+    """
     # Check if type is str
     if not isinstance(certidao,str):
         return False
@@ -147,7 +183,25 @@ def isCertidaoValid(certidao):
     return False
 
 def isProcessoValid(processo):
-    """ If processo in the Brazilian format is valid, it returns True, otherwise, it returns False. """
+    """
+        If processo in the Brazilian format is valid, it returns True, otherwise, it returns False.
+
+        Format: NNNNNNN-DD.AAAA.J.TR.OOOO
+
+        Onde:
+
+        NNNNNNN - Número seqüencial do Processo, por Unidade de Origem, a ser reiniciado a cada ano
+
+        DD - Dígito Verificador
+
+        AAAA - Ano do ajuizamento do Processo
+
+        J - Órgão ou Segmento do Poder Judiciário
+
+        TR - Tribunal do respectivo Segmento do Poder Judiciário
+
+        OOOO - Unidade de origem do Processo
+    """
     # Check if type is str
     if not isinstance(processo,str):
         return False
@@ -164,7 +218,11 @@ def isProcessoValid(processo):
     return False
 
 def isCreditoValid(credito):
-    """ If credito in the Brazilian format is valid, it returns True, otherwise, it returns False. """
+    """
+        If credito in the Brazilian format is valid, it returns True, otherwise, it returns False.
+
+        Format: 9999 9999 9999 999D
+    """
     # Check if type is str
     if not isinstance(credito,str):
         return False
@@ -188,7 +246,31 @@ def isCreditoValid(credito):
     return False
 
 def isNfeValid(nfe):
-    """ If nfe in the Brazilian format is valid, it returns True, otherwise, it returns False. """
+    """
+        If nfe in the Brazilian format is valid, it returns True, otherwise, it returns False.
+
+        Format: UUAAMMCCCCCCCCCCCCCCmmSSSNNNNNNNNNFccccccccD
+
+        Onde:
+
+        UU - Código da UF do emitente do Documento Fiscal;
+
+        AAMM - Ano e Mês de emissão da NF-e;
+
+        CCCCCCCCCCCCCC - CNPJ do emitente;
+
+        mm - Modelo do Documento Fiscal;
+        
+        SSS - Série do Documento Fiscal;
+
+        NNNNNNNNN - Número do Documento Fiscal;
+
+        F – forma de emissão da NF-e;
+
+        cccccccc - Código Numérico que compõe a Chave de Acesso;
+
+        D - Dígito Verificador da Chave de Acesso.
+    """
     # Check if type is str
     if not isinstance(nfe,str):
         return False
@@ -210,7 +292,19 @@ def isNfeValid(nfe):
     return False
 
 def isTituloValid(titulo):
-    """ If titulo in the Brazilian format is valid, it returns True, otherwise, it returns False. """
+    """
+        If titulo in the Brazilian format is valid, it returns True, otherwise, it returns False.
+
+        Format: 9999 9999 UUDD
+
+        Onde:
+
+        9999 9999 - Código
+
+        UU - Unidade da federacao
+        
+        DD - Digito Verificador
+    """
     # Check if type is str
     if not isinstance(titulo,str):
         return False
