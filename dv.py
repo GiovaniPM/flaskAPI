@@ -217,7 +217,7 @@ def isTituloValid(titulo):
     # Remove some unwanted characters
     titulo = re.sub("[^0-9]",'',titulo)
     # State
-    state = titulo[8:2]
+    state = titulo[8:10]
     # Checks if string has 11 characters
     if len(titulo) != 12:
         return False
