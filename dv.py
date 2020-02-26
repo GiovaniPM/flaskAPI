@@ -420,28 +420,28 @@ def view_dv():
             elif len(request.json['ect']) == 9 or len(request.json['ect']) == 13:
                 reg['ect' ] = isEctValid(request.json['ect'])
             else:
-                return jsonify( { 'error': 'ECT must be 16 lenght without mask.' } )
+                return jsonify( { 'error': 'ECT must be 9 lenght without mask.' } )
         if 'nfe' in request.json:
             if not isinstance(request.json['nfe'],str):
                 return jsonify( { 'error': 'NFE must be a string type.' } )
             elif len(request.json['nfe']) == 44:
                 reg['nfe' ] = isNfeValid(request.json['nfe'])
             else:
-                return jsonify( { 'error': 'NFE must be 16 lenght without mask.' } )
+                return jsonify( { 'error': 'NFE must be 44 lenght without mask.' } )
         if 'processo' in request.json:
             if not isinstance(request.json['processo'],str):
                 return jsonify( { 'error': 'PROCESSO must be a string type.' } )
             elif len(request.json['processo']) == 20:
                 reg['processo' ] = isProcessoValid(request.json['processo'])
             else:
-                return jsonify( { 'error': 'PROCESSO must be 16 lenght without mask.' } )
+                return jsonify( { 'error': 'PROCESSO must be 20 lenght without mask.' } )
         if 'titulo' in request.json:
             if not isinstance(request.json['titulo'],str):
                 return jsonify( { 'error': 'TITULO must be a string type.' } )
             elif len(request.json['titulo']) == 12:
                 reg['titulo' ] = isTituloValid(request.json['titulo'])
             else:
-                return jsonify( { 'error': 'TITULO must be 16 lenght without mask.' } )
+                return jsonify( { 'error': 'TITULO must be 12 lenght without mask.' } )
         json_result = json.dumps(reg)
         return jsonify(json_result)
     else:
