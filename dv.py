@@ -384,29 +384,29 @@ def view_dv():
     # TODO: Make the accounting routine
     reg          = {}
     if request.json == None:
-        jsonify( { 'error': 'No parameters found.' } )
+        return jsonify( { 'error': 'No parameters found.' } )
     elif 'titulo' in request.json or 'nfe' in request.json or 'credito' in request.json or 'processo' in request.json or 'certidao' in request.json or 'ect' in request.json or 'cnpj' in request.json or 'cpf' in request.json:
         if 'certidao' in request.json:
             if not isinstance(request.json['certidao'],str):
-                return jsonify( { 'error': 'Certidao must be a string type.' } )
+                return jsonify( { 'error': 'CERTIDAO must be a string type.' } )
             elif len(request.json['certidao']) == 32:
                 reg['certidao' ] = isCertidaoValid(request.json['certidao'])
             else:
-                jsonify( { 'error': 'Certidao must be 32 lenght.' } )
+                return jsonify( { 'error': 'CERTIDAO must be 32 lenght without mask.' } )
         if 'cnpj' in request.json:
             if not isinstance(request.json['cnpj'],str):
-                abort(415)
+                return jsonify( { 'error': 'CNPJ must be a string type.' } )
             elif len(request.json['cnpj']) == 14:
                 reg['cnpj' ] = isCnpjValid(request.json['cnpj'])
             else:
-                abort(406)
+                return jsonify( { 'error': 'CNPJ must be 14 lenght without mask.' } )
         if 'cpf' in request.json:
             if not isinstance(request.json['cpf'],str):
-                abort(415)
+                return jsonify( { 'error': 'CPF must be a string type.' } )
             elif len(request.json['cpf']) == 11:
                 reg['cpf' ] = isCpfValid(request.json['cpf'])
             else:
-                abort(406)
+                return jsonify( { 'error': 'CPF must be 11 lenght without mask.' } )
         if 'credito' in request.json:
             if not isinstance(request.json['credito'],str):
                 abort(415)
@@ -445,7 +445,7 @@ def view_dv():
         json_result = json.dumps(reg)
         return jsonify(json_result)
     else:
-        jsonify( { 'error': 'No keys valid found.' } )
+        return jsonify( { 'error': 'No keys valid found.' } )
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', '8080'))
