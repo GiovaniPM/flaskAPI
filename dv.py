@@ -384,15 +384,15 @@ def view_dv():
     # TODO: Make the accounting routine
     reg          = {}
     if request.json == None:
-        abort(404)
+        jsonify( { 'error': 'No parameters found.' } )
     elif 'titulo' in request.json or 'nfe' in request.json or 'credito' in request.json or 'processo' in request.json or 'certidao' in request.json or 'ect' in request.json or 'cnpj' in request.json or 'cpf' in request.json:
         if 'certidao' in request.json:
             if not isinstance(request.json['certidao'],str):
-                abort(415)
+                return jsonify( { 'error': 'Certidao must be a string type.' } )
             elif len(request.json['certidao']) == 32:
                 reg['certidao' ] = isCertidaoValid(request.json['certidao'])
             else:
-                abort(406)
+                jsonify( { 'error': 'Certidao must be 32 lenght.' } )
         if 'cnpj' in request.json:
             if not isinstance(request.json['cnpj'],str):
                 abort(415)
@@ -445,7 +445,7 @@ def view_dv():
         json_result = json.dumps(reg)
         return jsonify(json_result)
     else:
-        abort(405)
+        jsonify( { 'error': 'No keys valid found.' } )
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', '8080'))
