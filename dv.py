@@ -57,7 +57,6 @@ def isCpfValid(cpf):
     if cpf[-2:] == "%s%s" % (firstVerifyingDigit,secondVerifyingDigit):
         return True
     return False
-
 def isEctValid(ect):
     """
         If ect in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -87,7 +86,6 @@ def isEctValid(ect):
     if ect[-1:] == "%s" % (firstVerifyingDigit):
         return True
     return False
-
 def isCnpjValid(cnpj):
     """
         If cnpf in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -126,7 +124,6 @@ def isCnpjValid(cnpj):
     if cpf[-2:] == "%s%s" % (firstVerifyingDigit,secondVerifyingDigit):
         return True
     return False
-
 def isCertidaoValid(certidao):
     """
         If certidao in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -181,7 +178,6 @@ def isCertidaoValid(certidao):
     if certidao[-2:] == "%s%s" % (firstVerifyingDigit,secondVerifyingDigit):
         return True
     return False
-
 def isProcessoValid(processo):
     """
         If processo in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -216,7 +212,6 @@ def isProcessoValid(processo):
     if int(processo[7:9]) == VerifyingDigit:
         return True
     return False
-
 def isCreditoValid(credito):
     """
         If credito in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -244,7 +239,6 @@ def isCreditoValid(credito):
     if int(credito[-1:]) == VerifyingDigit:
         return True
     return False
-
 def isNfeValid(nfe):
     """
         If nfe in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -290,7 +284,6 @@ def isNfeValid(nfe):
     if int(nfe[-1:]) == VerifyingDigit:
         return True
     return False
-
 def isTituloValid(titulo):
     """
         If titulo in the Brazilian format is valid, it returns True, otherwise, it returns False.
