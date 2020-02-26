@@ -420,7 +420,7 @@ def view_dv():
             elif len(request.json['ect']) == 9 or len(request.json['ect']) == 13:
                 reg['ect' ] = isEctValid(request.json['ect'])
             else:
-                return jsonify( { 'error': 'ECT must be 9 lenght without mask.' } )
+                return jsonify( { 'error': 'ECT must be 9 or 13 lenght without mask.' } )
         if 'nfe' in request.json:
             if not isinstance(request.json['nfe'],str):
                 return jsonify( { 'error': 'NFE must be a string type.' } )
