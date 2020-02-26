@@ -409,39 +409,39 @@ def view_dv():
                 return jsonify( { 'error': 'CPF must be 11 lenght without mask.' } )
         if 'credito' in request.json:
             if not isinstance(request.json['credito'],str):
-                abort(415)
+                return jsonify( { 'error': 'CREDITO must be a string type.' } )
             elif len(request.json['credito']) == 16:
                 reg['credito' ] = isCreditoValid(request.json['credito'])
             else:
-                abort(406)
+                return jsonify( { 'error': 'CREDITO must be 16 lenght without mask.' } )
         if 'ect' in request.json:
             if not isinstance(request.json['ect'],str):
-                abort(415)
+                return jsonify( { 'error': 'ECT must be a string type.' } )
             elif len(request.json['ect']) == 9 or len(request.json['ect']) == 13:
                 reg['ect' ] = isEctValid(request.json['ect'])
             else:
-                abort(406)
+                return jsonify( { 'error': 'ECT must be 16 lenght without mask.' } )
         if 'nfe' in request.json:
             if not isinstance(request.json['nfe'],str):
-                abort(415)
+                return jsonify( { 'error': 'NFE must be a string type.' } )
             elif len(request.json['nfe']) == 44:
                 reg['nfe' ] = isNfeValid(request.json['nfe'])
             else:
-                abort(406)
+                return jsonify( { 'error': 'NFE must be 16 lenght without mask.' } )
         if 'processo' in request.json:
             if not isinstance(request.json['processo'],str):
-                abort(415)
+                return jsonify( { 'error': 'PROCESSO must be a string type.' } )
             elif len(request.json['processo']) == 20:
                 reg['processo' ] = isProcessoValid(request.json['processo'])
             else:
-                abort(406)
+                return jsonify( { 'error': 'PROCESSO must be 16 lenght without mask.' } )
         if 'titulo' in request.json:
             if not isinstance(request.json['titulo'],str):
-                abort(415)
+                return jsonify( { 'error': 'TITULO must be a string type.' } )
             elif len(request.json['titulo']) == 12:
                 reg['titulo' ] = isTituloValid(request.json['titulo'])
             else:
-                abort(406)
+                return jsonify( { 'error': 'TITULO must be 16 lenght without mask.' } )
         json_result = json.dumps(reg)
         return jsonify(json_result)
     else:
