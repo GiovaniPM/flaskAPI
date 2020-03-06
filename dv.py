@@ -6,6 +6,7 @@ from json import dumps
 from requests import post
 
 import datetime
+import time
 import json
 import logging
 import math
@@ -386,6 +387,7 @@ def view_dv():
     if request.json == None:
         return jsonify( { 'error': 'No parameters found.' } )
     elif 'titulo' in request.json or 'nfe' in request.json or 'credito' in request.json or 'processo' in request.json or 'certidao' in request.json or 'ect' in request.json or 'cnpj' in request.json or 'cpf' in request.json:
+        start = time.time()
         if 'certidao' in request.json:
             if not isinstance(request.json['certidao'],str):
                 return jsonify( { 'error': 'CERTIDAO must be a string type.' } )
@@ -443,6 +445,9 @@ def view_dv():
             else:
                 return jsonify( { 'error': 'TITULO must be 12 lenght without mask.' } )
         json_result = json.dumps(reg)
+        end = time.time()
+        elapsed = end - start
+        print(request.remote_addr, " - - ", datetime.datetime.now(), " elapsed: ", "{:.4f}".format(elapsed), " seconds")
         return jsonify(json_result)
     else:
         return jsonify( { 'error': 'No keys valid found.' } )
