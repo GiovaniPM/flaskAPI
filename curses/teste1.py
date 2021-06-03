@@ -2,12 +2,34 @@ import sys,os
 import curses
 
 def read_str(stdscr, y, x, label, size):
+    stdscr.attron(curses.color_pair(4))
     curses.echo()
     stdscr.addstr(y, x, label)
     inputtext = ' '
     stdscr.attron(curses.color_pair(3))
     stdscr.addstr(y, x + len(label), inputtext.rjust(size, ' '))
     return stdscr.getstr(y, x + len(label), size)
+
+def draw_box(stdscr, yini, xini, yfin, xfin):
+    stdscr.attron(curses.color_pair(4))
+    text1 = '-'
+    text2 = ' '
+    stdscr.addstr(yini, xini, '+' + text1.rjust(xfin - xini - 1, '-') + '+')
+    if (xfin - xini) > 1:
+        for y in range(yfin - yini - 1):
+            stdscr.addstr(yini + y + 1, xini, '|' + text2.rjust(xfin - xini - 1, ' ') + '|')
+        stdscr.addstr(yfin, xini, '+' + text1.rjust(xfin - xini - 1, '-') + '+')
+
+def border_box(stdscr, yini, xini, yfin, xfin):
+    stdscr.attron(curses.color_pair(4))
+    text1 = '-'
+    text2 = ' '
+    stdscr.addstr(yini, xini, '+' + text1.rjust(xfin - xini - 1, '-') + '+')
+    if (xfin - xini) > 1:
+        for y in range(yfin - yini - 1):
+            stdscr.addstr(yini + y + 1, xini, '|')
+            stdscr.addstr(yini + y + 1, xfin, '|')
+        stdscr.addstr(yfin, xini, '+' + text1.rjust(xfin - xini -1 , '-') + '+')
 
 def draw_menu(stdscr):
     k = 0
@@ -23,6 +45,7 @@ def draw_menu(stdscr):
     curses.init_pair(1, curses.COLOR_CYAN, curses.COLOR_BLACK)
     curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
     curses.init_pair(3, curses.COLOR_BLACK, curses.COLOR_WHITE)
+    curses.init_pair(4, curses.COLOR_WHITE, curses.COLOR_BLACK)
 
     # Loop where k is the last character pressed
     while (k != ord('q')):
@@ -87,7 +110,16 @@ def draw_menu(stdscr):
         stdscr.addstr(start_y + 5, start_x_keystr, keystr)
         stdscr.move(cursor_y, cursor_x)
 
-        s = read_str(stdscr, 25, 10, "Nome : ", 25)
+        scr2 = curses.newwin(3, 20, 20, 0)
+        scr2.box()
+        scr2.move(1, 1)
+        scr2.addstr(1, 1, "Search: ")
+        scr2.refresh()
+
+        draw_box(stdscr, 12, 9, 15, 80)
+        s = read_str(stdscr, 13, 10, "UserId   : ", 25)
+        s = read_str(stdscr, 14, 10, "SecretId : ", 25)
+        border_box(stdscr, 12, 9, 15, 80)
         
         # Refresh the screen
         stdscr.refresh()
