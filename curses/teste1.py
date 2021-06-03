@@ -110,11 +110,11 @@ def draw_menu(stdscr):
         stdscr.addstr(start_y + 5, start_x_keystr, keystr)
         stdscr.move(cursor_y, cursor_x)
 
-        scr2 = curses.newwin(3, 20, 20, 0)
-        scr2.box()
-        scr2.move(1, 1)
-        scr2.addstr(1, 1, "Search: ")
-        scr2.refresh()
+        #scr2 = curses.newwin(3, 20, 20, 0)
+        #scr2.box()
+        #scr2.move(1, 1)
+        #scr2.addstr(1, 1, "Search: ")
+        #scr2.refresh()
 
         draw_box(stdscr, 12, 9, 15, 80)
         s = read_str(stdscr, 13, 10, "UserId   : ", 25)
