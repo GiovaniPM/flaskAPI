@@ -6,13 +6,7 @@ from flask_cors import CORS, cross_origin
 from json import dumps
 from requests import post
 
-import datetime
-import time
-import json
-import logging
-import math
 import os
-import re
 
 app = Flask(__name__)
 CORS(app)
@@ -54,7 +48,7 @@ def ipte(codigo):
 
     dados = {}
     codigo = codigo.replace(" ", "").replace(".", "")
-    data_base = datetime.datetime(1997, 10, 7)
+    data_base = datetime(1997, 10, 7)
 
     dados['banco'        ] =     codigo[0 :3 ]
     dados['moeda'        ] =     codigo[3 :4 ]
@@ -70,7 +64,7 @@ def ipte(codigo):
     dados['dac5'         ] =     codigo[32:33]
     dados['fator'        ] =     codigo[33:37]
     dados['valor'        ] = int(codigo[37:47])/100
-    dados['vencimento'] = data_base + datetime.timedelta(days=int(dados['fator']))
+    dados['vencimento'] = data_base + timedelta(days=int(dados['fator']))
 
     return dados
 
