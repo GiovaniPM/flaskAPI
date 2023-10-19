@@ -444,7 +444,8 @@ def view_dv():
                 reg['titulo' ] = isTituloValid(request.json['titulo'])
             else:
                 return jsonify( { 'error': 'TITULO must be 12 lenght without mask.' } )
-        json_result = json.dumps(reg)
+        #json_result = json.dumps(reg)
+        json_result = reg
         end = time.time()
         elapsed = end - start
         print(request.remote_addr, " - - ", datetime.datetime.now(), " elapsed: ", "{:.4f}".format(elapsed), " seconds")
