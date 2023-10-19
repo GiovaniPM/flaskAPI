@@ -19,10 +19,43 @@ CORS(app)
 cors = CORS(app, resources={r"/api/*": {"origins": "*","methods":"POST,DELETE,PUT,GET,OPTIONS"}})
 
 def ipte(codigo):
+    """
+        Format: AAABC.CCDDX DDDDD.DEFFFY FGGGG.GGHHHZ K  UUUUVVVVVVVVVV
+                C1          C2           C3           C4 C5
+
+        Onde:
+
+        C1 (AAABC.CCDDX)
+            AAA = Código do Banco na Câmara de Compensação (Itaú=341)
+            B   = Código da moeda = "9"
+            CCC = Código da carteira de cobrança
+            DD  = Dois primeiros dígitos do Nosso Número
+            X   = DAC que amarra o campo 1
+
+        C2 (DDDDD.DEFFFY)
+            DDDDDD = Restante do Nosso Número
+            E      = DAC do campo [Agência/Conta/Carteira/ Nosso Número]
+            FFF    = Três primeiros números que identificam a Agência
+            Y      = DAC que amarra o campo 2
+
+        C3 (FGGGG.GGHHHZ)
+            F = Restante do número que identifica a agência
+            GGGGGG = Número da conta corrente + DAC
+            HHH = Zeros ( Não utilizado )
+            Z = DAC que amarra o campo 3
+
+        C4 (K)
+            K = DAC do Código de Barras
+
+        C5 (UUUUVVVVVVVVVV)
+            UUUU = Fator de vencimento
+            VVVVVVVVVV = Valor do Título
+    """
+
     dados = {}
     codigo = codigo.replace(" ", "").replace(".", "")
     data_base = datetime.datetime(1997, 10, 7)
-    
+
     dados['banco'        ] =     codigo[0 :3 ]
     dados['moeda'        ] =     codigo[3 :4 ]
     dados['carteira'     ] =     codigo[4 :7 ]
@@ -38,20 +71,20 @@ def ipte(codigo):
     dados['fator'        ] =     codigo[33:37]
     dados['valor'        ] = int(codigo[37:47])/100
     dados['vencimento'] = data_base + datetime.timedelta(days=int(dados['fator']))
-    
+
     return dados
-         
+
 @app.route('/cb', methods=['GET'])
 def view_dv():
     reg = {}
-    
+
     if request.json == None:
         return jsonify( { 'error': 'No parameters found.' } )
     elif 'ipte' in request.json:
         reg['ipte'] = ipte(request.json['ipte'])
     else:
         return jsonify( { 'error': 'No keys valid found.' } )
-    
+
     json_result = reg
     return jsonify(json_result)
 
