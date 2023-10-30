@@ -6,6 +6,7 @@ from flask_cors import CORS, cross_origin
 from json import dumps
 from requests import post
 
+import hashlib
 import os
 
 app = Flask(__name__)
@@ -214,13 +215,35 @@ def clisiscom(codigo):
 
     return dados
 
+def conv115(codigo):
+
+    linha = codigo['linha']
+
+    dados = {}
+
+    dados['CNPJ tomador'] = linha[0  :14 ]
+    dados['Data Emissao'] = linha[81 :89 ]
+    dados['Número NF   '] = linha[94 :103]
+    dados['Valor NF    '] = linha[135:147]
+    dados['Base ICMS   '] = linha[147:159]
+    dados['Valor ICMS  '] = linha[159:171]
+    dados['CNPJ emissor'] = codigo['cnpj']
+
+    mensagem = dados['CNPJ tomador'] + dados['Número NF   '] + dados['Valor NF    '] + dados['Base ICMS   '] + dados['Valor ICMS  '] + dados['Data Emissao'] + dados['CNPJ emissor']
+
+    dados['linha       '] = mensagem
+    dados['hash antiga '] = linha[103:135]
+    dados['hash nova   '] = hashlib.md5(mensagem.encode()).hexdigest().upper()
+
+    return dados
+
 @app.route('/cb', methods=['GET'])
 def decompoe():
     reg = {}
 
     if request.json == None:
         return jsonify( { 'error': 'No parameters found.' } )
-    if 'ipte' in request.json or 'ped.siscom' in request.json or 'cli.siscom' in request.json:
+    if 'ipte' in request.json or 'ped.siscom' in request.json or 'cli.siscom' in request.json or 'age.siscom' in request.json or 'conv115' in request.json:
         if 'ipte' in request.json:
             reg['ipte'] = ipte(request.json['ipte'])
             print(reg['ipte'])
@@ -233,6 +256,9 @@ def decompoe():
         if 'cli.siscom' in request.json:
             reg['cli.siscom'] = clisiscom(request.json['cli.siscom'])
             print(reg['cli.siscom'])
+        if 'conv115' in request.json:
+            reg['conv115'] = conv115(request.json['conv115'])
+            print(reg['conv115'])
     else:
         return jsonify( { 'error': 'No keys valid found.' } )
 
