@@ -246,19 +246,15 @@ def decompoe():
     if 'ipte' in request.json or 'ped.siscom' in request.json or 'cli.siscom' in request.json or 'age.siscom' in request.json or 'conv115' in request.json:
         if 'ipte' in request.json:
             reg['ipte'] = ipte(request.json['ipte'])
-            print(reg['ipte'])
         if 'ped.siscom' in request.json:
             reg['ped.siscom'] = pedsiscom(request.json['ped.siscom'])
-            print(reg['ped.siscom'])
         if 'age.siscom' in request.json:
             reg['age.siscom'] = agesiscom(request.json['age.siscom'])
-            print(reg['age.siscom'])
         if 'cli.siscom' in request.json:
             reg['cli.siscom'] = clisiscom(request.json['cli.siscom'])
-            print(reg['cli.siscom'])
         if 'conv115' in request.json:
             reg['conv115'] = conv115(request.json['conv115'])
-            print(reg['conv115'])
+        print(reg)
     else:
         return jsonify( { 'error': 'No keys valid found.' } )
 
