@@ -229,7 +229,13 @@ def conv115(codigo):
     dados['Valor ICMS  '] = linha[159:171]
     dados['CNPJ emissor'] = codigo['cnpj']
 
-    mensagem = dados['CNPJ tomador'] + dados['Número NF   '] + dados['Valor NF    '] + dados['Base ICMS   '] + dados['Valor ICMS  '] + dados['Data Emissao'] + dados['CNPJ emissor']
+    mensagem = dados['CNPJ tomador'] +\
+               dados['Número NF   '] +\
+               dados['Valor NF    '] +\
+               dados['Base ICMS   '] +\
+               dados['Valor ICMS  '] +\
+               dados['Data Emissao'] +\
+               dados['CNPJ emissor']
 
     dados['linha       '] = mensagem
     dados['hash antiga '] = linha[103:135]
