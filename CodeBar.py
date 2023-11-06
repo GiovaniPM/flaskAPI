@@ -69,6 +69,110 @@ def ipte(codigo):
 
     return dados
 
+def pedmidia(codigo):
+
+    dados = {}
+    linha = codigo.split(';')
+
+    for x in range(50):
+        linha.append('<N/D>')
+
+    dados['FTFNUM         '] = linha[0 ]
+    dados['FTCODPRODU     '] = linha[1 ]
+    dados['FTCEMP         '] = linha[2 ]
+    dados['FT55CHQDIA     '] = linha[3 ]
+    dados['FT55CHQANO     '] = linha[4 ]
+    dados['FTCLIAGE       '] = linha[5 ]
+    dados['FTAAN8         '] = linha[6 ]
+    dados['FTLAGY         '] = linha[7 ]
+    dados['FTAN8          '] = linha[8 ]
+    dados['FTCTNB         '] = linha[9 ]
+    dados['FTNRPEDBIL     '] = linha[10]
+    dados['FTBACS         '] = linha[11]
+    dados['FTBCT          '] = linha[12]
+    dados['FTDTFM         '] = linha[13]
+    dados['FTDATAENV      '] = linha[14]
+    dados['FTDEMS         '] = ' '
+    dados['FTVLRPROD      '] = linha[15]
+    dados['FTVLRTOTLI     '] = linha[16]
+    dados['FTVLRTOTBR     '] = linha[17]
+    dados['FTCARBAN       '] = linha[18]
+    dados['FTDAYF         '] = linha[19]
+    dados['FTDAYT         '] = 0
+    dados['FTPTYPE        '] = linha[20]
+    dados['FTDTVN         '] = linha[21]
+    dados['FTTITULO       '] = linha[22]
+    dados['FTBRULIQ       '] = linha[23]
+    dados['FTCODORIGE     '] = linha[24]
+    dados['FTFATMIN       '] = linha[25]
+    dados['FTACTAPP       '] = linha[26]
+    dados['FTDSPA1        '] = ' '
+    dados['FTCNOP         '] = ' '
+    dados['FTAA07         '] = linha[27]
+    dados['FTAA02         '] = linha[28]
+    dados['FTAA03         '] = linha[28]
+    dados['FTMODE         '] = linha[30]
+    dados['FTCOMD         '] = 0
+    dados['FTAN8R         '] = 0
+    dados['FTDOC          '] = 0
+    dados['FTPRODID       '] = linha[31]
+    dados['FTCO           '] = linha[32]
+    dados['FTAC03         '] = linha[33]
+    dados['FTUPMJ         '] = 0
+    dados['FTUPMT         '] = 0
+    dados['FTCRTDT        '] = 0
+    dados['FTCRTM         '] = 0
+    dados['FTC75PRNO      '] = linha[34]
+    dados['FTCDC          '] = linha[35]
+    dados['FTRETRANCA     '] = linha[36]
+    dados['FTREFATUR      '] = linha[37]
+    dados['FTCODTPVEN     '] = linha[38]
+    dados['FTFATSUBS      '] = linha[39]
+    dados['FTMCDTL        '] = ' '
+    dados['FTACPL         '] = linha[40]
+    dados['FTAA10         '] = linha[41]
+    dados['FTCCDP         '] = linha[42]
+    dados['FTCTA          '] = linha[43]
+    dados['FTCTCR         '] = linha[44]
+    dados['FTCTDB         '] = linha[45]
+    dados['FTCTDC         '] = linha[46]
+    dados['FTCTPT         '] = linha[47]
+
+    return dados
+
+def climidia(codigo):
+
+    dados = {}
+    linha = codigo.split(';')
+
+    for x in range(50):
+        linha.append('<N/D>')
+
+    dados['FTUKCENM   '] = linha[0 ]
+    dados['FTCLIAGE   '] = linha[1 ]
+    dados['FTAN8      '] = linha[2 ]
+    dados['FTWBICGC   '] = linha[3 ]
+    dados['FTBCGC     '] = linha[4 ]
+    dados['FTWBEND    '] = linha[5 ]
+    dados['FTLOCAT    '] = linha[6 ]
+    dados['FTWBCID    '] = linha[7 ]
+    dados['FTWBUF     '] = linha[8 ]
+    dados['FTWBCEP    '] = linha[9 ]
+    dados['FTWBIE16   '] = linha[10]
+    dados['FTWBIM16   '] = linha[11]
+    dados['FTCTNB     '] = linha[12]
+    dados['FTMODE     '] = 'N'
+    dados['FTBACS     '] = 0
+    dados['FTBCT      '] = linha[13]
+    dados['FTALPH     '] = linha[14]
+    dados['FTAAN8     '] = 0
+    dados['FTLAGY     '] = 0
+    dados['FTBLCT     '] = 0
+    dados['FTBRD60    '] = linha[15]
+    dados['FTNRBIL    '] = '16'
+
+    return dados
+
 def pedsiscom(codigo):
 
     dados = {}
@@ -249,9 +353,19 @@ def decompoe():
 
     if request.json == None:
         return jsonify( { 'error': 'No parameters found.' } )
-    if 'ipte' in request.json or 'ped.siscom' in request.json or 'cli.siscom' in request.json or 'age.siscom' in request.json or 'conv115' in request.json:
+    if 'ipte' in request.json or\
+       'ped.midia+' in request.json or\
+       'cli.midia+' in request.json or\
+       'ped.siscom' in request.json or\
+       'cli.siscom' in request.json or\
+       'age.siscom' in request.json or\
+       'conv115' in request.json:
         if 'ipte' in request.json:
             reg['ipte'] = ipte(request.json['ipte'])
+        if 'ped.midia+' in request.json:
+            reg['ped.midia+'] = pedmidia(request.json['ped.midia+'])
+        if 'cli.midia+' in request.json:
+            reg['cli.midia+'] = climidia(request.json['cli.midia+'])
         if 'ped.siscom' in request.json:
             reg['ped.siscom'] = pedsiscom(request.json['ped.siscom'])
         if 'age.siscom' in request.json:
