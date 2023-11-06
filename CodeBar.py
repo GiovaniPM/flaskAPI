@@ -353,30 +353,31 @@ def decompoe():
 
     if request.json == None:
         return jsonify( { 'error': 'No parameters found.' } )
-    if 'ipte' in request.json or\
-       'ped.midia+' in request.json or\
-       'cli.midia+' in request.json or\
-       'ped.siscom' in request.json or\
-       'cli.siscom' in request.json or\
-       'age.siscom' in request.json or\
-       'conv115' in request.json:
-        if 'ipte' in request.json:
-            reg['ipte'] = ipte(request.json['ipte'])
-        if 'ped.midia+' in request.json:
-            reg['ped.midia+'] = pedmidia(request.json['ped.midia+'])
-        if 'cli.midia+' in request.json:
-            reg['cli.midia+'] = climidia(request.json['cli.midia+'])
-        if 'ped.siscom' in request.json:
-            reg['ped.siscom'] = pedsiscom(request.json['ped.siscom'])
-        if 'age.siscom' in request.json:
-            reg['age.siscom'] = agesiscom(request.json['age.siscom'])
-        if 'cli.siscom' in request.json:
-            reg['cli.siscom'] = clisiscom(request.json['cli.siscom'])
-        if 'conv115' in request.json:
-            reg['conv115'] = conv115(request.json['conv115'])
-        print(reg)
     else:
-        return jsonify( { 'error': 'No keys valid found.' } )
+        if 'ipte' in request.json or\
+           'ped.midia+' in request.json or\
+           'cli.midia+' in request.json or\
+           'ped.siscom' in request.json or\
+           'cli.siscom' in request.json or\
+           'age.siscom' in request.json or\
+           'conv115' in request.json:
+            if 'ipte' in request.json:
+                reg['ipte'] = ipte(request.json['ipte'])
+            if 'ped.midia+' in request.json:
+                reg['ped.midia+'] = pedmidia(request.json['ped.midia+'])
+            if 'cli.midia+' in request.json:
+                reg['cli.midia+'] = climidia(request.json['cli.midia+'])
+            if 'ped.siscom' in request.json:
+                reg['ped.siscom'] = pedsiscom(request.json['ped.siscom'])
+            if 'age.siscom' in request.json:
+                reg['age.siscom'] = agesiscom(request.json['age.siscom'])
+            if 'cli.siscom' in request.json:
+                reg['cli.siscom'] = clisiscom(request.json['cli.siscom'])
+            if 'conv115' in request.json:
+                reg['conv115'] = conv115(request.json['conv115'])
+            print(reg)
+        else:
+            return jsonify( { 'error': 'No keys valid found.' } )
 
     json_result = reg
     return jsonify(json_result)
