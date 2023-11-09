@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_00tugxn" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.15.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0">
+  <decision id="Decision_16sqx2o" name="Desconto">
+    <decisionTable id="DecisionTable_1v0kaa3">
+      <input id="Input_1" label="Preço">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0gxg7bi" label="Categoria">
+        <inputExpression id="LiteralExpression_1vof3jw" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Desconto" typeRef="string" />
+      <rule id="DecisionRule_0t6lh5w">
+        <inputEntry id="UnaryTests_0r9i8tq">
+          <text>&lt; 100</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mkskd4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0njvs66">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0amfxv5">
+        <inputEntry id="UnaryTests_1ktk8op">
+          <text>&gt;= 100 and &lt; 200</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wt0mbd">
+          <text>eletronico</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fqcs86">
+          <text>10</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t8ou20">
+        <inputEntry id="UnaryTests_0wc1v16">
+          <text>&gt;= 200</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yc120h">
+          <text>eletronico</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1y30io7">
+          <text>15</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_138fuji">
+        <inputEntry id="UnaryTests_1h5w8b0">
+          <text>&gt;= 100 and &lt; 300</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iq4u9e">
+          <text>vestuario</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gfx7at">
+          <text>5</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1njer8q">
+        <inputEntry id="UnaryTests_1e684w1">
+          <text>&gt;= 300</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cm76go">
+          <text>vestuario</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0aw9cdr">
+          <text>10</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ktukbj">
+        <inputEntry id="UnaryTests_1b5zq4p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rf03bo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ymw13m">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_16sqx2o">
+        <dc:Bounds height="80" width="180" x="150" y="120" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

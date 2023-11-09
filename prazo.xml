@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="definitions_1" name="definitions_1">
+  <decision id="decision_1" name="Prazo de entrega">
+    <informationRequirement id="InformationRequirement_13y1ttc">
+      <requiredInput href="#inputData_1" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1ci6zxv">
+      <requiredInput href="#inputData_2" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0z4gyxg">
+      <requiredInput href="#inputData_3" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0sp963z">
+      <requiredInput href="#inputData_4" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0u6vbed">
+      <requiredInput href="#inputData_5" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1294i8q" hitPolicy="FIRST" outputLabel="Prazo de entrega">
+      <input id="input_1" label="Data do pedido">
+        <inputExpression id="LiteralExpression_15ope5z" typeRef="date and time">
+          <text>Data do pedido</text>
+        </inputExpression>
+      </input>
+      <input id="input_2" label="Data máxima">
+        <inputExpression id="LiteralExpression_172xtsr" typeRef="date">
+          <text>Data máxima</text>
+        </inputExpression>
+      </input>
+      <input id="input_3" label="Duração normal">
+        <inputExpression id="LiteralExpression_0wonv8s" typeRef="duration">
+          <text>Duração normal</text>
+        </inputExpression>
+      </input>
+      <input id="input_4" label="Duração expressa">
+        <inputExpression id="LiteralExpression_0u7n0pn" typeRef="duration">
+          <text>Duração expressa</text>
+        </inputExpression>
+      </input>
+      <input id="input_5" label="Modalidade">
+        <inputExpression id="LiteralExpression_0106ok0" typeRef="string">
+          <text>Modalidade</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" typeRef="date and time" />
+      <rule id="row_1">
+        <inputEntry id="inputEntry_1">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_3">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_4">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_5">
+          <text>"normal"</text>
+        </inputEntry>
+        <outputEntry id="outputEntry_1">
+          <text>Data do pedido + Duração normal</text>
+        </outputEntry>
+      </rule>
+      <rule id="row_2">
+        <inputEntry id="inputEntry_6">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_7">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_8">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_9">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_10">
+          <text>"expressa"</text>
+        </inputEntry>
+        <outputEntry id="outputEntry_2">
+          <text>Data do pedido + Duração expressa</text>
+        </outputEntry>
+      </rule>
+      <rule id="row_3">
+        <inputEntry id="inputEntry_11">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_12">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_13">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_14">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="inputEntry_15">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="outputEntry_3">
+          <text>Data do pedido</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="inputData_1" name="Data do pedido" />
+  <inputData id="inputData_2" name="Data máxima" />
+  <inputData id="inputData_3" name="Duração normal" />
+  <inputData id="inputData_4" name="Duração expressa" />
+  <inputData id="inputData_5" name="Modalidade" />
+</definitions>

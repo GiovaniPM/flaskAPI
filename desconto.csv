@@ -1,0 +1,7 @@
+preco;categoria;desconto;
+< 100;-;0;
+>= 100 and < 200;eletronico;10;
+>= 200;eletronico;15;
+>= 100 and < 300;vestuario;5;
+>= 300;vestuario;10;
+-;-;0;
