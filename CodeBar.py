@@ -331,7 +331,7 @@ def conv115(codigo):
     dados['Valor NF    '] = linha[135:147]
     dados['Base ICMS   '] = linha[147:159]
     dados['Valor ICMS  '] = linha[159:171]
-    dados['CNPJ emissor'] = codigo['cnpj']
+    dados['CNPJ emissor'] = codigo['cnpj_emissor']
 
     mensagem = dados['CNPJ tomador'] +\
                dados['Número NF   '] +\
