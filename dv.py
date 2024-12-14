@@ -31,26 +31,26 @@ def isCpfValid(cpf):
     # Checks if string has 11 characters
     if len(cpf) != 11:
         return False
-    sum = 0
+    sum_val = 0
     weight = 10
     """ Calculating the first cpf check digit. """
     for n in range(9):
-        sum = sum + int(cpf[n]) * weight
+        sum_val = sum_val + int(cpf[n]) * weight
         # Decrement weight
         weight = weight - 1
-    verifyingDigit = 11 -  sum % 11
+    verifyingDigit = 11 -  sum_val % 11
     if verifyingDigit > 9 :
         firstVerifyingDigit = 0
     else:
         firstVerifyingDigit = verifyingDigit
     """ Calculating the second check digit of cpf. """
-    sum = 0
+    sum_val = 0
     weight = 11
     for n in range(10):
-        sum = sum + int(cpf[n]) * weight
+        sum_val = sum_val + int(cpf[n]) * weight
         # Decrement weight
         weight = weight - 1
-    verifyingDigit = 11 -  sum % 11
+    verifyingDigit = 11 -  sum_val % 11
     if verifyingDigit > 9 :
         secondVerifyingDigit = 0
     else:
@@ -58,6 +58,7 @@ def isCpfValid(cpf):
     if cpf[-2:] == "%s%s" % (firstVerifyingDigit,secondVerifyingDigit):
         return True
     return False
+
 def isEctValid(ect):
     """
         If ect in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -72,12 +73,12 @@ def isEctValid(ect):
     # Checks if string has 9 characters
     if len(ect) != 9:
         return False
-    sum = 0
+    sum_val = 0
     weight = [8,6,4,2,3,5,9,7]
     """ Calculating the ect check digit. """
     for n in range(8):
-        sum = sum + int(ect[n]) * weight[n]
-    verifyingDigit = 11 -  sum % 11
+        sum_val = sum_val + int(ect[n]) * weight[n]
+    verifyingDigit = 11 -  sum_val % 11
     if verifyingDigit == 0:
         firstVerifyingDigit = 5
     elif verifyingDigit == 1:
@@ -87,6 +88,7 @@ def isEctValid(ect):
     if ect[-1:] == "%s" % (firstVerifyingDigit):
         return True
     return False
+
 def isCnpjValid(cnpj):
     """
         If cnpf in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -101,23 +103,23 @@ def isCnpjValid(cnpj):
     # Checks if string has 11 characters
     if len(cpf) != 14:
         return False
-    sum = 0
+    sum_val = 0
     weight = [5,4,3,2,9,8,7,6,5,4,3,2]
     """ Calculating the first cpf check digit. """
     for n in range(12):
         value =  int(cpf[n]) * weight[n]
-        sum = sum + value
-    verifyingDigit = sum % 11
+        sum_val = sum_val + value
+    verifyingDigit = sum_val % 11
     if verifyingDigit < 2 :
         firstVerifyingDigit = 0
     else:
         firstVerifyingDigit = 11 - verifyingDigit
     """ Calculating the second check digit of cpf. """
-    sum = 0
+    sum_val = 0
     weight = [6,5,4,3,2,9,8,7,6,5,4,3,2]
     for n in range(13):
-        sum = sum + int(cpf[n]) * weight[n]
-    verifyingDigit = sum % 11
+        sum_val = sum_val + int(cpf[n]) * weight[n]
+    verifyingDigit = sum_val % 11
     if verifyingDigit < 2 :
         secondVerifyingDigit = 0
     else:
@@ -125,6 +127,7 @@ def isCnpjValid(cnpj):
     if cpf[-2:] == "%s%s" % (firstVerifyingDigit,secondVerifyingDigit):
         return True
     return False
+
 def isCertidaoValid(certidao):
     """
         If certidao in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -159,26 +162,27 @@ def isCertidaoValid(certidao):
     # Checks if string has 11 characters
     if len(certidao) != 32:
         return False
-    sum = 0
+    sum_val = 0
     weight = [2,3,4,5,6,7,8,9,10,0,1,2,3,4,5,6,7,8,9,10,0,1,2,3,4,5,6,7,8,9]
     """ Calculating the first certidao check digit. """
     for n in range(30):
         value =  int(certidao[n]) * weight[n]
-        sum = sum + value
-    firstVerifyingDigit = sum % 11
+        sum_val = sum_val + value
+    firstVerifyingDigit = sum_val % 11
     if firstVerifyingDigit == 10:
         firstVerifyingDigit = 1
     """ Calculating the second check digit of certidao. """
-    sum = 0
+    sum_val = 0
     weight = [1,2,3,4,5,6,7,8,9,10,0,1,2,3,4,5,6,7,8,9,10,0,1,2,3,4,5,6,7,8,9]
     for n in range(31):
-        sum = sum + int(certidao[n]) * weight[n]
-    secondVerifyingDigit = sum % 11
+        sum_val = sum_val + int(certidao[n]) * weight[n]
+    secondVerifyingDigit = sum_val % 11
     if secondVerifyingDigit == 10:
         secondVerifyingDigit = 1
     if certidao[-2:] == "%s%s" % (firstVerifyingDigit,secondVerifyingDigit):
         return True
     return False
+
 def isProcessoValid(processo):
     """
         If processo in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -208,11 +212,12 @@ def isProcessoValid(processo):
     if len(processo) != 20:
         return False
     """ Calculating the processo check digit. """
-    sum = int(processo[0:7]+processo[9:20])*100
-    VerifyingDigit = 98 - (sum % 97)
+    sum_val = int(processo[0:7]+processo[9:20])*100
+    VerifyingDigit = 98 - (sum_val % 97)
     if int(processo[7:9]) == VerifyingDigit:
         return True
     return False
+
 def isCreditoValid(credito):
     """
         If credito in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -228,18 +233,19 @@ def isCreditoValid(credito):
     if len(credito) != 16:
         return False
     """ Calculating the credito check digit. """
-    sum = 0
+    sum_val = 0
     weight = [2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2]
     """ Calculating the first certidao check digit. """
     for n in range(15):
         value =  int(credito[n]) * weight[n]
         if value > 9:
             value = value - 9
-        sum = sum + value
-    VerifyingDigit = (math.ceil(sum/10)*10)-sum
+        sum_val = sum_val + value
+    VerifyingDigit = (math.ceil(sum_val/10)*10)-sum_val
     if int(credito[-1:]) == VerifyingDigit:
         return True
     return False
+
 def isNfeValid(nfe):
     """
         If nfe in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -275,16 +281,17 @@ def isNfeValid(nfe):
     if len(nfe) != 44:
         return False
     """ Calculating the nfe check digit. """
-    sum = 0
+    sum_val = 0
     weight = [4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2]
     """ Calculating the first certidao check digit. """
     for n in range(43):
         value =  int(nfe[n]) * weight[n]
-        sum = sum + value
-    VerifyingDigit = 11 - (sum % 11)
+        sum_val = sum_val + value
+    VerifyingDigit = 11 - (sum_val % 11)
     if int(nfe[-1:]) == VerifyingDigit:
         return True
     return False
+
 def isTituloValid(titulo):
     """
         If titulo in the Brazilian format is valid, it returns True, otherwise, it returns False.
@@ -309,20 +316,20 @@ def isTituloValid(titulo):
     # Checks if string has 11 characters
     if len(titulo) != 12:
         return False
-    sum = 0
+    sum_val = 0
     weight = [2,3,4,5,6,7,8,9]
     """ Calculating the first titulo check digit. """
     for n in range(8):
-        sum = sum + int(titulo[n]) * weight[n]
-    verifyingDigit = sum % 11
+        sum_val = sum_val + int(titulo[n]) * weight[n]
+    verifyingDigit = sum_val % 11
     if verifyingDigit > 10 :
         verifyingDigit = 0
     if state == '01' or state == '02' and verifyingDigit == 0:
         verifyingDigit = 1
     firstVerifyingDigit = verifyingDigit
     """ Calculating the second check digit of titulo. """
-    sum = (int(titulo[8]) * 7) + (int(titulo[9]) * 8) + (firstVerifyingDigit * 9)
-    verifyingDigit = sum % 11
+    sum_val = (int(titulo[8]) * 7) + (int(titulo[9]) * 8) + (firstVerifyingDigit * 9)
+    verifyingDigit = sum_val % 11
     if verifyingDigit > 10 :
         verifyingDigit = 0
     if state == '01' or state == '02' and verifyingDigit == 0:
